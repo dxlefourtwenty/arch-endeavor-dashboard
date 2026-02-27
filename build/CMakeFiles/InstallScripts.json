@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/dxle/dev/desktop-projects/dashboard/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

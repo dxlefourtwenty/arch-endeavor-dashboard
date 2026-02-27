@@ -1,0 +1,14 @@
+--bare
+-I
+/home/dxle/dev/desktop-projects/dashboard/build
+-I
+/home/dxle/dev/desktop-projects/dashboard/build/TopDash
+-I
+/home/dxle/dev/desktop-projects/dashboard/build
+-I
+/usr/lib/qt6/qml
+--resource
+/home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qmake_TopDash.qrc
+--resource
+/home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/topdash_raw_qml_0.qrc
+/home/dxle/dev/desktop-projects/dashboard/qml/Main.qml

@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/TopDash">
+    <file alias="qmldir">/home/dxle/dev/desktop-projects/dashboard/build/TopDash/qmldir</file>
+  </qresource>
+</RCC>
+

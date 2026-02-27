@@ -1,0 +1,14 @@
+-rootPath
+/home/dxle/dev/desktop-projects/dashboard
+-cmake-output
+-output-file
+/home/dxle/dev/desktop-projects/dashboard/build/.qt/qml_imports/topdash_conf.cmake
+-importPath
+/home/dxle/dev/desktop-projects/dashboard/build
+-importPath
+/home/dxle/dev/desktop-projects/dashboard/build/TopDash
+-importPath
+/usr/lib/qt6/qml
+-qrcFiles
+/home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qmake_TopDash.qrc
+/home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/topdash_raw_qml_0.qrc

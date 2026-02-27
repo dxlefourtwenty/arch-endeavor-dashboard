@@ -1,0 +1,15 @@
+{
+    "formatRevision": 1,
+    "modules": [
+        {
+            "moduleFiles": [
+                {
+                    "entries": [
+                    ],
+                    "filePath": "/home/dxle/dev/desktop-projects/dashboard/qml/theme/Theme.qml"
+                }
+            ],
+            "moduleId": "TopDash(topdash)"
+        }
+    ]
+}

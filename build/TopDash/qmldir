@@ -1,0 +1,6 @@
+module TopDash
+typeinfo topdash.qmltypes
+prefer :/TopDash/
+Main 1.0 qml/Main.qml
+depends QtQuick
+
