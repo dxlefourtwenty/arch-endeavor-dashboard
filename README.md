@@ -1,1 +1,1 @@
-# Dashboard project for my Linux desktop
+# Dashboard app for my Linux desktop
