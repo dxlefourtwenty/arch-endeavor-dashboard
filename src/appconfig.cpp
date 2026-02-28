@@ -1,27 +1,46 @@
 #include "appconfig.h"
-#include <QDir>
-#include <QFileInfo>
 
-AppConfig::AppConfig(QObject *parent) : QObject(parent) {
-    m_profile = findProfileImage();
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QStandardPaths>
+
+AppConfig::AppConfig(QObject *parent)
+    : QObject(parent)
+{
+    load();
 }
 
-QUrl AppConfig::findProfileImage() const {
-    const QString base = QDir::homePath() + "/bin/images/profile-picture";
-    const QStringList exts = {"png", "jpg", "jpeg", "svg"};
-
-    for (const auto &ext : exts) {
-        QString path = base + "." + ext;
-        if (QFileInfo::exists(path))
-            return QUrl::fromLocalFile(path);
-    }
-    return QUrl(); // empty
+QString AppConfig::username() const
+{
+    return m_username;
 }
 
-void AppConfig::rescanProfileImage() {
-    QUrl next = findProfileImage();
-    if (next != m_profile) {
-        m_profile = next;
-        emit profileImageChanged();
-    }
+QString AppConfig::profileImage() const
+{
+    return m_profileImage;
+}
+
+void AppConfig::reload()
+{
+    load();
+    emit configChanged();
+}
+
+void AppConfig::load()
+{
+    QString path =
+        QStandardPaths::writableLocation(
+            QStandardPaths::HomeLocation)
+        + "/.config/dashboard/config.json";
+
+    QFile file(path);
+    if (!file.open(QIODevice::ReadOnly))
+        return;
+
+    auto doc = QJsonDocument::fromJson(file.readAll());
+    auto obj = doc.object();
+
+    m_username = obj["username"].toString("user");
+    m_profileImage = obj["profileImage"].toString("");
 }

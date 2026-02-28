@@ -1,2 +1,2 @@
-build:
+compile:
 	cmake --build build

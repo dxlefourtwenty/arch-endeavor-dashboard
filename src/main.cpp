@@ -24,9 +24,15 @@ static void onSigUsr1(int)
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv);
+    qputenv("QML_XHR_ALLOW_FILE_READ", "1");
 
+    QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
+    SystemInfo sys;
+    AppConfig cfg;
+
+    engine.rootContext()->setContextProperty("SystemInfo", &sys);
+    engine.rootContext()->setContextProperty("AppConfig", &cfg);
     engine.loadFromModule("TopDash", "Main");
 
     if (engine.rootObjects().isEmpty())

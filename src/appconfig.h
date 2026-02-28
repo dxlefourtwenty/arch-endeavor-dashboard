@@ -1,27 +1,29 @@
 #pragma once
-#include <QObject>
-#include <QUrl>
 
-class AppConfig : public QObject {
+#include <QObject>
+#include <QString>
+
+class AppConfig : public QObject
+{
     Q_OBJECT
-    Q_PROPERTY(QString username READ username CONSTANT)
-    Q_PROPERTY(QUrl profileImage READ profileImage NOTIFY profileImageChanged)
+
+    Q_PROPERTY(QString username READ username NOTIFY configChanged)
+    Q_PROPERTY(QString profileImage READ profileImage NOTIFY configChanged)
 
 public:
     explicit AppConfig(QObject *parent = nullptr);
 
-    QString username() const { return m_username; }
-    QUrl profileImage() const { return m_profile; }
+    QString username() const;
+    QString profileImage() const;
 
-public slots:
-    void rescanProfileImage();
+    Q_INVOKABLE void reload();
 
 signals:
-    void profileImageChanged();
+    void configChanged();
 
 private:
-    QString m_username = "dxlefourtwenty";
-    QUrl m_profile;
+    void load();
 
-    QUrl findProfileImage() const;
+    QString m_username;
+    QString m_profileImage;
 };

@@ -62,6 +62,24 @@ build CMakeFiles/topdash.dir/src/main.cpp.o: CXX_COMPILER__topdash_unscanned_ /h
   OBJECT_FILE_DIR = CMakeFiles/topdash.dir/src
   TARGET_SUPPORT_DIR = CMakeFiles/topdash.dir
 
+build CMakeFiles/topdash.dir/src/systeminfo.cpp.o: CXX_COMPILER__topdash_unscanned_ /home/dxle/dev/desktop-projects/dashboard/src/systeminfo.cpp || cmake_object_order_depends_target_topdash
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB
+  DEP_FILE = CMakeFiles/topdash.dir/src/systeminfo.cpp.o.d
+  FLAGS = -std=gnu++20 -mno-direct-extern-access
+  INCLUDES = -I/home/dxle/dev/desktop-projects/dashboard/build/topdash_autogen/include -I/home/dxle/dev/desktop-projects/dashboard -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtOpenGL
+  OBJECT_DIR = CMakeFiles/topdash.dir
+  OBJECT_FILE_DIR = CMakeFiles/topdash.dir/src
+  TARGET_SUPPORT_DIR = CMakeFiles/topdash.dir
+
+build CMakeFiles/topdash.dir/src/appconfig.cpp.o: CXX_COMPILER__topdash_unscanned_ /home/dxle/dev/desktop-projects/dashboard/src/appconfig.cpp || cmake_object_order_depends_target_topdash
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB
+  DEP_FILE = CMakeFiles/topdash.dir/src/appconfig.cpp.o.d
+  FLAGS = -std=gnu++20 -mno-direct-extern-access
+  INCLUDES = -I/home/dxle/dev/desktop-projects/dashboard/build/topdash_autogen/include -I/home/dxle/dev/desktop-projects/dashboard -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtOpenGL
+  OBJECT_DIR = CMakeFiles/topdash.dir
+  OBJECT_FILE_DIR = CMakeFiles/topdash.dir/src
+  TARGET_SUPPORT_DIR = CMakeFiles/topdash.dir
+
 build CMakeFiles/topdash.dir/topdash_qmltyperegistrations.cpp.o: CXX_COMPILER__topdash_unscanned_ /home/dxle/dev/desktop-projects/dashboard/build/topdash_qmltyperegistrations.cpp || cmake_object_order_depends_target_topdash
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB
   DEP_FILE = CMakeFiles/topdash.dir/topdash_qmltyperegistrations.cpp.o.d
@@ -115,7 +133,7 @@ build CMakeFiles/topdash.dir/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp.o: CXX_COMP
 #############################################
 # Link the executable topdash
 
-build topdash: CXX_EXECUTABLE_LINKER__topdash_ CMakeFiles/topdash.dir/topdash_autogen/mocs_compilation.cpp.o CMakeFiles/topdash.dir/src/main.cpp.o CMakeFiles/topdash.dir/topdash_qmltyperegistrations.cpp.o CMakeFiles/topdash.dir/build/.qt/rcc/qrc_qmake_TopDash.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qmlcache_loader.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/Main_qml.cpp.o CMakeFiles/topdash.dir/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp.o | /usr/lib/libQt6Quick.so.6.10.2 /usr/lib/libLayerShellQtInterface.so.6.6.0 /usr/lib/libQt6OpenGL.so.6.10.2 /usr/lib/libQt6Qml.so.6.10.2 /usr/lib/libQt6Network.so.6.10.2 /usr/lib/libQt6Gui.so.6.10.2 /usr/lib/libGLX.so /usr/lib/libOpenGL.so /usr/lib/libQt6Core.so.6.10.2 || generate_qmlls_build_ini_file topdash_autogen topdash_autogen_timestamp_deps topdash_copy_qml topdash_copy_res topdash_qmlimportscan
+build topdash: CXX_EXECUTABLE_LINKER__topdash_ CMakeFiles/topdash.dir/topdash_autogen/mocs_compilation.cpp.o CMakeFiles/topdash.dir/src/main.cpp.o CMakeFiles/topdash.dir/src/systeminfo.cpp.o CMakeFiles/topdash.dir/src/appconfig.cpp.o CMakeFiles/topdash.dir/topdash_qmltyperegistrations.cpp.o CMakeFiles/topdash.dir/build/.qt/rcc/qrc_qmake_TopDash.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qmlcache_loader.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/Main_qml.cpp.o CMakeFiles/topdash.dir/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp.o | /usr/lib/libQt6Quick.so.6.10.2 /usr/lib/libLayerShellQtInterface.so.6.6.0 /usr/lib/libQt6OpenGL.so.6.10.2 /usr/lib/libQt6Qml.so.6.10.2 /usr/lib/libQt6Network.so.6.10.2 /usr/lib/libQt6Gui.so.6.10.2 /usr/lib/libGLX.so /usr/lib/libOpenGL.so /usr/lib/libQt6Core.so.6.10.2 || generate_qmlls_build_ini_file topdash_autogen topdash_autogen_timestamp_deps topdash_copy_qml topdash_copy_res topdash_qmlimportscan
   DEP_FILE = CMakeFiles/topdash.dir/link.d
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/topdash.dir/link.d
   LINK_LIBRARIES = /usr/lib/libQt6Quick.so.6.10.2  /usr/lib/libLayerShellQtInterface.so.6.6.0  /usr/lib/libQt6OpenGL.so.6.10.2  /usr/lib/libQt6Qml.so.6.10.2  /usr/lib/libQt6Network.so.6.10.2  /usr/lib/libQt6Gui.so.6.10.2  /usr/lib/libGLX.so  /usr/lib/libOpenGL.so  /usr/lib/libQt6Core.so.6.10.2

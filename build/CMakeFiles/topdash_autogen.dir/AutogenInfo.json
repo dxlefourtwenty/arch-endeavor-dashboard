@@ -1052,7 +1052,21 @@
 	"CROSS_CONFIG" : false,
 	"DEP_FILE" : "/home/dxle/dev/desktop-projects/dashboard/build/topdash_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "topdash_autogen/timestamp",
-	"HEADERS" : [],
+	"HEADERS" : 
+	[
+		[
+			"/home/dxle/dev/desktop-projects/dashboard/src/appconfig.h",
+			"MU",
+			"UVLADIE3JM/moc_appconfig.cpp",
+			null
+		],
+		[
+			"/home/dxle/dev/desktop-projects/dashboard/src/systeminfo.h",
+			"MU",
+			"UVLADIE3JM/moc_systeminfo.cpp",
+			null
+		]
+	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/dxle/dev/desktop-projects/dashboard/build/topdash_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/dxle/dev/desktop-projects/dashboard/build/topdash_autogen/mocs_compilation.cpp",
@@ -1134,7 +1148,17 @@
 	"SETTINGS_FILE" : "/home/dxle/dev/desktop-projects/dashboard/build/CMakeFiles/topdash_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/dxle/dev/desktop-projects/dashboard/src/main.cpp", "MU", null ]
+		[
+			"/home/dxle/dev/desktop-projects/dashboard/src/appconfig.cpp",
+			"MU",
+			null
+		],
+		[ "/home/dxle/dev/desktop-projects/dashboard/src/main.cpp", "MU", null ],
+		[
+			"/home/dxle/dev/desktop-projects/dashboard/src/systeminfo.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

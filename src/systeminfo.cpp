@@ -1,101 +1,124 @@
 #include "systeminfo.h"
 #include <QFile>
-#include <QTextStream>
-#include <QProcess>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
 #include <sys/statvfs.h>
+#include <QTimer>
 
-SystemInfo::SystemInfo(QObject *parent) : QObject(parent) {
-    auto *t = new QTimer(this);
-    t->setInterval(1000);
-    connect(t, &QTimer::timeout, this, &SystemInfo::refresh);
-    t->start();
-    refresh();
+SystemInfo::SystemInfo(QObject *parent)
+  : QObject(parent)
+{
+  setupGpu();
+
+  connect(&timer, &QTimer::timeout, this, [this]() {
+      updateCpu();
+      updateRam();
+      updateDisk();
+  });
+
+  timer.start(1000);
 }
 
-static bool readFirstLine(const QString &path, QString &out) {
-    QFile f(path);
-    if (!f.open(QIODevice::ReadOnly | QIODevice::Text)) return false;
-    out = QString::fromUtf8(f.readLine()).trimmed();
-    return true;
-}
+void SystemInfo::updateCpu()
+{
+    QFile file("/proc/stat");
+    if (!file.open(QIODevice::ReadOnly))
+        return;
 
-int SystemInfo::readCpuPercent() {
-    QString line;
-    if (!readFirstLine("/proc/stat", line)) return m_cpu;
+    QByteArray line = file.readLine();
+    QList<QByteArray> parts = line.simplified().split(' ');
 
-    // cpu  user nice system idle iowait irq softirq steal ...
-    QTextStream ts(&line);
-    QString cpuLabel;
-    quint64 user=0,nice=0,system=0,idle=0,iowait=0,irq=0,softirq=0,steal=0;
-    ts >> cpuLabel >> user >> nice >> system >> idle >> iowait >> irq >> softirq >> steal;
-    quint64 idleAll = idle + iowait;
-    quint64 nonIdle = user + nice + system + irq + softirq + steal;
-    quint64 total = idleAll + nonIdle;
+    long long user = parts[1].toLongLong();
+    long long nice = parts[2].toLongLong();
+    long long system = parts[3].toLongLong();
+    long long idle = parts[4].toLongLong();
 
-    if (m_prevTotal == 0) { // first sample
-        m_prevTotal = total;
-        m_prevIdle = idleAll;
-        return m_cpu;
-    }
+    long long total = user + nice + system + idle;
 
-    quint64 totald = total - m_prevTotal;
-    quint64 idled  = idleAll - m_prevIdle;
-    m_prevTotal = total;
-    m_prevIdle = idleAll;
+    long long totalDiff = total - lastTotal;
+    long long idleDiff = idle - lastIdle;
 
-    if (totald == 0) return m_cpu;
-    double usage = (double)(totald - idled) / (double)totald * 100.0;
-    int pct = (int)(usage + 0.5);
-    if (pct < 0) pct = 0;
-    if (pct > 100) pct = 100;
-    return pct;
-}
-
-int SystemInfo::readDiskPercent() {
-    struct statvfs s{};
-    if (statvfs("/", &s) != 0) return m_disk;
-
-    // percent used = 1 - (free blocks for unprivileged / total)
-    double total = (double)s.f_blocks;
-    double free  = (double)s.f_bavail;
-    if (total <= 0) return m_disk;
-
-    double usedPct = (1.0 - (free / total)) * 100.0;
-    int pct = (int)(usedPct + 0.5);
-    if (pct < 0) pct = 0;
-    if (pct > 100) pct = 100;
-    return pct;
-}
-
-int SystemInfo::readGpuPercent() {
-    // Try NVIDIA first
-    {
-        QProcess p;
-        p.start("nvidia-smi", {"--query-gpu=utilization.gpu", "--format=csv,noheader,nounits"});
-        if (p.waitForFinished(150) && p.exitStatus() == QProcess::NormalExit && p.exitCode() == 0) {
-            bool ok=false;
-            int v = QString::fromUtf8(p.readAllStandardOutput()).trimmed().toInt(&ok);
-            if (ok) return std::clamp(v, 0, 100);
+    if (totalDiff > 0) {
+        int usage = 100 * (totalDiff - idleDiff) / totalDiff;
+        if (usage != m_cpu) {
+            m_cpu = usage;
+            emit cpuUsageChanged();
         }
     }
 
-    // Try common sysfs busy percent (works on many Intel/AMD setups depending on driver)
-    QString line;
-    if (readFirstLine("/sys/class/drm/card0/device/gpu_busy_percent", line)) {
-        bool ok=false;
-        int v = line.toInt(&ok);
-        if (ok) return std::clamp(v, 0, 100);
-    }
-
-    return 0; // fallback
+    lastTotal = total;
+    lastIdle = idle;
 }
 
-void SystemInfo::refresh() {
-    int newCpu = readCpuPercent();
-    int newGpu = readGpuPercent();
-    int newDisk = readDiskPercent();
+void SystemInfo::updateRam()
+{
+    QFile file("/proc/meminfo");
+    if (!file.open(QIODevice::ReadOnly))
+        return;
 
-    if (newCpu != m_cpu) { m_cpu = newCpu; emit cpuPercentChanged(); }
-    if (newGpu != m_gpu) { m_gpu = newGpu; emit gpuPercentChanged(); }
-    if (newDisk != m_disk) { m_disk = newDisk; emit diskPercentChanged(); }
+    const QByteArray content = file.readAll();  // ← read everything at once
+    
+    long total = 0, available = 0;
+    for (const QByteArray &line : content.split('\n')) {
+        if (line.startsWith("MemTotal"))
+            total = line.split(':')[1].simplified().split(' ')[0].toLong();
+        if (line.startsWith("MemAvailable"))
+            available = line.split(':')[1].simplified().split(' ')[0].toLong();
+    }
+
+    qDebug() << "RAM total:" << total << "available:" << available;
+    if (total == 0) return;
+    int used = 100 - ((available * 100) / total);
+    if (used != m_ram) { m_ram = used; emit ramUsageChanged(); }
+}
+
+void SystemInfo::updateDisk()
+{
+    struct statvfs stat{};
+    if (statvfs("/", &stat) != 0)
+        return;
+    unsigned long total = stat.f_blocks * stat.f_frsize;
+    unsigned long free  = stat.f_bavail * stat.f_frsize;
+    if (total == 0) return;  // ← guard
+    int used = 100 - (free * 100 / total);
+    if (used != m_disk) { m_disk = used; emit diskUsageChanged(); }
+}
+
+void SystemInfo::setupGpu()
+{
+    gpuProc.start("intel_gpu_top", {"-J", "-s", "1000"});
+
+    connect(&gpuProc, &QProcess::readyReadStandardOutput, this, [this]() {
+        gpuBuffer += gpuProc.readAllStandardOutput();
+
+        // find complete top-level JSON objects by tracking brace depth
+        int depth = 0, start = -1;
+        for (int i = 0; i < gpuBuffer.size(); i++) {
+            if (gpuBuffer[i] == '{') {
+                if (depth++ == 0) start = i;
+            } else if (gpuBuffer[i] == '}') {
+                if (--depth == 0 && start != -1) {
+                    QByteArray chunk = gpuBuffer.mid(start, i - start + 1);
+                    gpuBuffer = gpuBuffer.mid(i + 1);
+                    i = -1; // restart scan
+
+                    auto doc = QJsonDocument::fromJson(chunk);
+                    if (!doc.isObject()) continue;
+
+                    auto engines = doc.object()["engines"].toObject();
+                    if (!engines.contains("Render/3D")) continue;
+
+                    double usage = engines["Render/3D"]
+                                   .toObject()["busy"]
+                                   .toDouble();
+                    int iUsage = qRound(usage);
+                    if (iUsage != m_gpu) {
+                        m_gpu = iUsage;
+                        emit gpuUsageChanged();
+                    }
+                }
+            }
+        }
+    });
 }

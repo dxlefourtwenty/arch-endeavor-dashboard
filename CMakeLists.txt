@@ -13,6 +13,8 @@ find_package(LayerShellQt REQUIRED)
 
 qt_add_executable(topdash
     src/main.cpp
+    src/systeminfo.cpp
+    src/appconfig.cpp
 )
 
 qt_add_qml_module(topdash
