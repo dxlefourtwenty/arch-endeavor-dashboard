@@ -1134,7 +1134,11 @@
 	[
 		"/home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qrc_qmake_TopDash.cpp",
 		"/home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp",
+		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/CalendarView_qml.cpp",
 		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/Main_qml.cpp",
+		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp",
+		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/StatsCard_qml.cpp",
+		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/TasksView_qml.cpp",
 		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qmlcache_loader.cpp",
 		"/home/dxle/dev/desktop-projects/dashboard/build/topdash_qmltyperegistrations.cpp"
 	],
@@ -1166,7 +1170,11 @@
 	[
 		"/home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qrc_qmake_TopDash.cpp",
 		"/home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp",
+		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/CalendarView_qml.cpp",
 		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/Main_qml.cpp",
+		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp",
+		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/StatsCard_qml.cpp",
+		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/TasksView_qml.cpp",
 		"/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qmlcache_loader.cpp",
 		"/home/dxle/dev/desktop-projects/dashboard/build/topdash_qmltyperegistrations.cpp"
 	],

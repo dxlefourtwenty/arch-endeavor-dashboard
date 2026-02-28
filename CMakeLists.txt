@@ -22,6 +22,10 @@ qt_add_qml_module(topdash
     VERSION 1.0
     QML_FILES
         qml/Main.qml
+        qml/CalendarView.qml
+        qml/StatsCard.qml
+        qml/TasksView.qml
+        qml/ProfileCard.qml
 )
 
 target_link_libraries(topdash PRIVATE

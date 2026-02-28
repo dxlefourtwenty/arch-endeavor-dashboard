@@ -3,3 +3,7 @@
 --resource
 /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/topdash_raw_qml_0.qrc
 /TopDash/qml/Main.qml
+/TopDash/qml/CalendarView.qml
+/TopDash/qml/StatsCard.qml
+/TopDash/qml/TasksView.qml
+/TopDash/qml/ProfileCard.qml

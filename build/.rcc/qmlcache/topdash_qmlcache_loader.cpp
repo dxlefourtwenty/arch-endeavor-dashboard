@@ -12,6 +12,34 @@ namespace _0x5f_TopDash_qml_Main_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _0x5f_TopDash_qml_CalendarView_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _0x5f_TopDash_qml_StatsCard_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _0x5f_TopDash_qml_TasksView_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _0x5f_TopDash_qml_ProfileCard_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -27,6 +55,10 @@ Q_GLOBAL_STATIC(Registry, unitRegistry)
 
 Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/TopDash/qml/Main.qml"), &QmlCacheGeneratedCode::_0x5f_TopDash_qml_Main_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/TopDash/qml/CalendarView.qml"), &QmlCacheGeneratedCode::_0x5f_TopDash_qml_CalendarView_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/TopDash/qml/StatsCard.qml"), &QmlCacheGeneratedCode::_0x5f_TopDash_qml_StatsCard_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/TopDash/qml/TasksView.qml"), &QmlCacheGeneratedCode::_0x5f_TopDash_qml_TasksView_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/TopDash/qml/ProfileCard.qml"), &QmlCacheGeneratedCode::_0x5f_TopDash_qml_ProfileCard_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

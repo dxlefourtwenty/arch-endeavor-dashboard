@@ -12,3 +12,7 @@
 --resource
 /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/topdash_raw_qml_0.qrc
 /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml
+/home/dxle/dev/desktop-projects/dashboard/qml/CalendarView.qml
+/home/dxle/dev/desktop-projects/dashboard/qml/StatsCard.qml
+/home/dxle/dev/desktop-projects/dashboard/qml/TasksView.qml
+/home/dxle/dev/desktop-projects/dashboard/qml/ProfileCard.qml

@@ -42,7 +42,7 @@ cmake_ninja_workdir = /home/dxle/dev/desktop-projects/dashboard/build/
 #############################################
 # Order-only phony target for topdash
 
-build cmake_object_order_depends_target_topdash: phony || .qt/rcc/qrc_qmake_TopDash.cpp .qt/rcc/qrc_topdash_raw_qml_0.cpp .rcc/qmlcache/topdash_qml/Main_qml.cpp .rcc/qmlcache/topdash_qml/Main_qml.cpp.aotstats .rcc/qmlcache/topdash_qmlcache_loader.cpp TopDash/topdash.qmltypes generate_qmlls_build_ini_file meta_types/qt6topdash_metatypes.json meta_types/qt6topdash_metatypes.json.gen meta_types/topdash_json_file_list.txt meta_types/topdash_json_file_list.txt.timestamp topdash_autogen topdash_autogen/mocs_compilation.cpp topdash_autogen/timestamp topdash_autogen_timestamp_deps topdash_copy_qml topdash_copy_res topdash_qmlimportscan topdash_qmltyperegistrations.cpp
+build cmake_object_order_depends_target_topdash: phony || .qt/rcc/qrc_qmake_TopDash.cpp .qt/rcc/qrc_topdash_raw_qml_0.cpp .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/Main_qml.cpp .rcc/qmlcache/topdash_qml/Main_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/TasksView_qml.cpp .rcc/qmlcache/topdash_qml/TasksView_qml.cpp.aotstats .rcc/qmlcache/topdash_qmlcache_loader.cpp TopDash/topdash.qmltypes generate_qmlls_build_ini_file meta_types/qt6topdash_metatypes.json meta_types/qt6topdash_metatypes.json.gen meta_types/topdash_json_file_list.txt meta_types/topdash_json_file_list.txt.timestamp topdash_autogen topdash_autogen/mocs_compilation.cpp topdash_autogen/timestamp topdash_autogen_timestamp_deps topdash_copy_qml topdash_copy_res topdash_qmlimportscan topdash_qmltyperegistrations.cpp
 
 build CMakeFiles/topdash.dir/topdash_autogen/mocs_compilation.cpp.o: CXX_COMPILER__topdash_unscanned_ /home/dxle/dev/desktop-projects/dashboard/build/topdash_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_topdash
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB
@@ -116,6 +116,42 @@ build CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/Main_qml.cpp.o: CXX
   OBJECT_FILE_DIR = CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml
   TARGET_SUPPORT_DIR = CMakeFiles/topdash.dir
 
+build CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/CalendarView_qml.cpp.o: CXX_COMPILER__topdash_unscanned_ /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/CalendarView_qml.cpp || cmake_object_order_depends_target_topdash
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB
+  DEP_FILE = CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/CalendarView_qml.cpp.o.d
+  FLAGS = -std=gnu++20 -mno-direct-extern-access
+  INCLUDES = -I/home/dxle/dev/desktop-projects/dashboard/build/topdash_autogen/include -I/home/dxle/dev/desktop-projects/dashboard -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtOpenGL
+  OBJECT_DIR = CMakeFiles/topdash.dir
+  OBJECT_FILE_DIR = CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml
+  TARGET_SUPPORT_DIR = CMakeFiles/topdash.dir
+
+build CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/StatsCard_qml.cpp.o: CXX_COMPILER__topdash_unscanned_ /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/StatsCard_qml.cpp || cmake_object_order_depends_target_topdash
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB
+  DEP_FILE = CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/StatsCard_qml.cpp.o.d
+  FLAGS = -std=gnu++20 -mno-direct-extern-access
+  INCLUDES = -I/home/dxle/dev/desktop-projects/dashboard/build/topdash_autogen/include -I/home/dxle/dev/desktop-projects/dashboard -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtOpenGL
+  OBJECT_DIR = CMakeFiles/topdash.dir
+  OBJECT_FILE_DIR = CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml
+  TARGET_SUPPORT_DIR = CMakeFiles/topdash.dir
+
+build CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/TasksView_qml.cpp.o: CXX_COMPILER__topdash_unscanned_ /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/TasksView_qml.cpp || cmake_object_order_depends_target_topdash
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB
+  DEP_FILE = CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/TasksView_qml.cpp.o.d
+  FLAGS = -std=gnu++20 -mno-direct-extern-access
+  INCLUDES = -I/home/dxle/dev/desktop-projects/dashboard/build/topdash_autogen/include -I/home/dxle/dev/desktop-projects/dashboard -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtOpenGL
+  OBJECT_DIR = CMakeFiles/topdash.dir
+  OBJECT_FILE_DIR = CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml
+  TARGET_SUPPORT_DIR = CMakeFiles/topdash.dir
+
+build CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp.o: CXX_COMPILER__topdash_unscanned_ /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp || cmake_object_order_depends_target_topdash
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB
+  DEP_FILE = CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp.o.d
+  FLAGS = -std=gnu++20 -mno-direct-extern-access
+  INCLUDES = -I/home/dxle/dev/desktop-projects/dashboard/build/topdash_autogen/include -I/home/dxle/dev/desktop-projects/dashboard -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtOpenGL
+  OBJECT_DIR = CMakeFiles/topdash.dir
+  OBJECT_FILE_DIR = CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml
+  TARGET_SUPPORT_DIR = CMakeFiles/topdash.dir
+
 build CMakeFiles/topdash.dir/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp.o: CXX_COMPILER__topdash_unscanned_ /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp || cmake_object_order_depends_target_topdash
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICK_LIB
   DEP_FILE = CMakeFiles/topdash.dir/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp.o.d
@@ -133,7 +169,7 @@ build CMakeFiles/topdash.dir/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp.o: CXX_COMP
 #############################################
 # Link the executable topdash
 
-build topdash: CXX_EXECUTABLE_LINKER__topdash_ CMakeFiles/topdash.dir/topdash_autogen/mocs_compilation.cpp.o CMakeFiles/topdash.dir/src/main.cpp.o CMakeFiles/topdash.dir/src/systeminfo.cpp.o CMakeFiles/topdash.dir/src/appconfig.cpp.o CMakeFiles/topdash.dir/topdash_qmltyperegistrations.cpp.o CMakeFiles/topdash.dir/build/.qt/rcc/qrc_qmake_TopDash.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qmlcache_loader.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/Main_qml.cpp.o CMakeFiles/topdash.dir/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp.o | /usr/lib/libQt6Quick.so.6.10.2 /usr/lib/libLayerShellQtInterface.so.6.6.0 /usr/lib/libQt6OpenGL.so.6.10.2 /usr/lib/libQt6Qml.so.6.10.2 /usr/lib/libQt6Network.so.6.10.2 /usr/lib/libQt6Gui.so.6.10.2 /usr/lib/libGLX.so /usr/lib/libOpenGL.so /usr/lib/libQt6Core.so.6.10.2 || generate_qmlls_build_ini_file topdash_autogen topdash_autogen_timestamp_deps topdash_copy_qml topdash_copy_res topdash_qmlimportscan
+build topdash: CXX_EXECUTABLE_LINKER__topdash_ CMakeFiles/topdash.dir/topdash_autogen/mocs_compilation.cpp.o CMakeFiles/topdash.dir/src/main.cpp.o CMakeFiles/topdash.dir/src/systeminfo.cpp.o CMakeFiles/topdash.dir/src/appconfig.cpp.o CMakeFiles/topdash.dir/topdash_qmltyperegistrations.cpp.o CMakeFiles/topdash.dir/build/.qt/rcc/qrc_qmake_TopDash.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qmlcache_loader.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/Main_qml.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/CalendarView_qml.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/StatsCard_qml.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/TasksView_qml.cpp.o CMakeFiles/topdash.dir/build/.rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp.o CMakeFiles/topdash.dir/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp.o | /usr/lib/libQt6Quick.so.6.10.2 /usr/lib/libLayerShellQtInterface.so.6.6.0 /usr/lib/libQt6OpenGL.so.6.10.2 /usr/lib/libQt6Qml.so.6.10.2 /usr/lib/libQt6Network.so.6.10.2 /usr/lib/libQt6Gui.so.6.10.2 /usr/lib/libGLX.so /usr/lib/libOpenGL.so /usr/lib/libQt6Core.so.6.10.2 || generate_qmlls_build_ini_file topdash_autogen topdash_autogen_timestamp_deps topdash_copy_qml topdash_copy_res topdash_qmlimportscan
   DEP_FILE = CMakeFiles/topdash.dir/link.d
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/topdash.dir/link.d
   LINK_LIBRARIES = /usr/lib/libQt6Quick.so.6.10.2  /usr/lib/libLayerShellQtInterface.so.6.6.0  /usr/lib/libQt6OpenGL.so.6.10.2  /usr/lib/libQt6Qml.so.6.10.2  /usr/lib/libQt6Network.so.6.10.2  /usr/lib/libQt6Gui.so.6.10.2  /usr/lib/libGLX.so  /usr/lib/libOpenGL.so  /usr/lib/libQt6Core.so.6.10.2
@@ -214,13 +250,13 @@ build generate_qmlls_build_ini_file: phony CMakeFiles/generate_qmlls_build_ini_f
 #############################################
 # Utility command for module_topdash_aotstats_target
 
-build module_topdash_aotstats_target: phony CMakeFiles/module_topdash_aotstats_target .rcc/qmlcache/module_topdash.aotstats .rcc/qmlcache/topdash_qml/Main_qml.cpp .rcc/qmlcache/topdash_qml/Main_qml.cpp.aotstats topdash_qmltyperegistrations.cpp TopDash/topdash.qmltypes topdash_qmltyperegistration
+build module_topdash_aotstats_target: phony CMakeFiles/module_topdash_aotstats_target .rcc/qmlcache/module_topdash.aotstats .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/Main_qml.cpp .rcc/qmlcache/topdash_qml/Main_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/TasksView_qml.cpp .rcc/qmlcache/topdash_qml/TasksView_qml.cpp.aotstats topdash_qmltyperegistrations.cpp TopDash/topdash.qmltypes topdash_qmltyperegistration
 
 
 #############################################
 # Utility command for all_aotstats
 
-build all_aotstats: phony CMakeFiles/all_aotstats .rcc/qmlcache/all_aotstats.aotstats .rcc/qmlcache/all_aotstats.txt .rcc/qmlcache/module_topdash.aotstats .rcc/qmlcache/topdash_qml/Main_qml.cpp .rcc/qmlcache/topdash_qml/Main_qml.cpp.aotstats topdash_qmltyperegistrations.cpp TopDash/topdash.qmltypes module_topdash_aotstats_target
+build all_aotstats: phony CMakeFiles/all_aotstats .rcc/qmlcache/all_aotstats.aotstats .rcc/qmlcache/all_aotstats.txt .rcc/qmlcache/module_topdash.aotstats .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/Main_qml.cpp .rcc/qmlcache/topdash_qml/Main_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/TasksView_qml.cpp .rcc/qmlcache/topdash_qml/TasksView_qml.cpp.aotstats topdash_qmltyperegistrations.cpp TopDash/topdash.qmltypes module_topdash_aotstats_target
 
 
 #############################################
@@ -311,9 +347,45 @@ build .rcc/qmlcache/topdash_qml/Main_qml.cpp .rcc/qmlcache/topdash_qml/Main_qml.
 
 
 #############################################
+# Custom command for .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp
+
+build .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp.aotstats | ${cmake_ninja_workdir}.rcc/qmlcache/topdash_qml/CalendarView_qml.cpp ${cmake_ninja_workdir}.rcc/qmlcache/topdash_qml/CalendarView_qml.cpp.aotstats: CUSTOM_COMMAND /usr/lib/qt6/qmlcachegen /home/dxle/dev/desktop-projects/dashboard/qml/CalendarView.qml .qt/rcc/qmake_TopDash.qrc .qt/rcc/topdash_raw_qml_0.qrc TopDash/topdash.qmltypes TopDash/qmldir
+  COMMAND = cd /home/dxle/dev/desktop-projects/dashboard/build && /usr/bin/cmake -E make_directory /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml && /usr/lib/qt6/qmlcachegen --bare --resource-path /TopDash/qml/CalendarView.qml -I /home/dxle/dev/desktop-projects/dashboard/build -I /usr/lib/qt6/qml -i /home/dxle/dev/desktop-projects/dashboard/build/TopDash/qmldir --resource /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qmake_TopDash.qrc --resource /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/topdash_raw_qml_0.qrc --dump-aot-stats "--module-id=TopDash(topdash)" -o /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/CalendarView_qml.cpp /home/dxle/dev/desktop-projects/dashboard/qml/CalendarView.qml
+  DESC = Generating .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp, .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp.aotstats
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp
+
+build .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp.aotstats | ${cmake_ninja_workdir}.rcc/qmlcache/topdash_qml/StatsCard_qml.cpp ${cmake_ninja_workdir}.rcc/qmlcache/topdash_qml/StatsCard_qml.cpp.aotstats: CUSTOM_COMMAND /usr/lib/qt6/qmlcachegen /home/dxle/dev/desktop-projects/dashboard/qml/StatsCard.qml .qt/rcc/qmake_TopDash.qrc .qt/rcc/topdash_raw_qml_0.qrc TopDash/topdash.qmltypes TopDash/qmldir
+  COMMAND = cd /home/dxle/dev/desktop-projects/dashboard/build && /usr/bin/cmake -E make_directory /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml && /usr/lib/qt6/qmlcachegen --bare --resource-path /TopDash/qml/StatsCard.qml -I /home/dxle/dev/desktop-projects/dashboard/build -I /usr/lib/qt6/qml -i /home/dxle/dev/desktop-projects/dashboard/build/TopDash/qmldir --resource /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qmake_TopDash.qrc --resource /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/topdash_raw_qml_0.qrc --dump-aot-stats "--module-id=TopDash(topdash)" -o /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/StatsCard_qml.cpp /home/dxle/dev/desktop-projects/dashboard/qml/StatsCard.qml
+  DESC = Generating .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp, .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp.aotstats
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc/qmlcache/topdash_qml/TasksView_qml.cpp
+
+build .rcc/qmlcache/topdash_qml/TasksView_qml.cpp .rcc/qmlcache/topdash_qml/TasksView_qml.cpp.aotstats | ${cmake_ninja_workdir}.rcc/qmlcache/topdash_qml/TasksView_qml.cpp ${cmake_ninja_workdir}.rcc/qmlcache/topdash_qml/TasksView_qml.cpp.aotstats: CUSTOM_COMMAND /usr/lib/qt6/qmlcachegen /home/dxle/dev/desktop-projects/dashboard/qml/TasksView.qml .qt/rcc/qmake_TopDash.qrc .qt/rcc/topdash_raw_qml_0.qrc TopDash/topdash.qmltypes TopDash/qmldir
+  COMMAND = cd /home/dxle/dev/desktop-projects/dashboard/build && /usr/bin/cmake -E make_directory /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml && /usr/lib/qt6/qmlcachegen --bare --resource-path /TopDash/qml/TasksView.qml -I /home/dxle/dev/desktop-projects/dashboard/build -I /usr/lib/qt6/qml -i /home/dxle/dev/desktop-projects/dashboard/build/TopDash/qmldir --resource /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qmake_TopDash.qrc --resource /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/topdash_raw_qml_0.qrc --dump-aot-stats "--module-id=TopDash(topdash)" -o /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/TasksView_qml.cpp /home/dxle/dev/desktop-projects/dashboard/qml/TasksView.qml
+  DESC = Generating .rcc/qmlcache/topdash_qml/TasksView_qml.cpp, .rcc/qmlcache/topdash_qml/TasksView_qml.cpp.aotstats
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp
+
+build .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp.aotstats | ${cmake_ninja_workdir}.rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp ${cmake_ninja_workdir}.rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp.aotstats: CUSTOM_COMMAND /usr/lib/qt6/qmlcachegen /home/dxle/dev/desktop-projects/dashboard/qml/ProfileCard.qml .qt/rcc/qmake_TopDash.qrc .qt/rcc/topdash_raw_qml_0.qrc TopDash/topdash.qmltypes TopDash/qmldir
+  COMMAND = cd /home/dxle/dev/desktop-projects/dashboard/build && /usr/bin/cmake -E make_directory /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml && /usr/lib/qt6/qmlcachegen --bare --resource-path /TopDash/qml/ProfileCard.qml -I /home/dxle/dev/desktop-projects/dashboard/build -I /usr/lib/qt6/qml -i /home/dxle/dev/desktop-projects/dashboard/build/TopDash/qmldir --resource /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qmake_TopDash.qrc --resource /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/topdash_raw_qml_0.qrc --dump-aot-stats "--module-id=TopDash(topdash)" -o /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp /home/dxle/dev/desktop-projects/dashboard/qml/ProfileCard.qml
+  DESC = Generating .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp, .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp.aotstats
+  restat = 1
+
+
+#############################################
 # Custom command for .qt/rcc/qrc_topdash_raw_qml_0.cpp
 
-build .qt/rcc/qrc_topdash_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_topdash_raw_qml_0.cpp: CUSTOM_COMMAND /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml .qt/rcc/topdash_raw_qml_0.qrc /usr/lib/qt6/rcc || generate_qmlls_build_ini_file topdash_autogen topdash_autogen_timestamp_deps topdash_copy_qml topdash_copy_res topdash_qmlimportscan
+build .qt/rcc/qrc_topdash_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_topdash_raw_qml_0.cpp: CUSTOM_COMMAND /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml /home/dxle/dev/desktop-projects/dashboard/qml/CalendarView.qml /home/dxle/dev/desktop-projects/dashboard/qml/StatsCard.qml /home/dxle/dev/desktop-projects/dashboard/qml/TasksView.qml /home/dxle/dev/desktop-projects/dashboard/qml/ProfileCard.qml .qt/rcc/topdash_raw_qml_0.qrc /usr/lib/qt6/rcc || generate_qmlls_build_ini_file topdash_autogen topdash_autogen_timestamp_deps topdash_copy_qml topdash_copy_res topdash_qmlimportscan
   COMMAND = cd /home/dxle/dev/desktop-projects/dashboard/build && /usr/lib/qt6/rcc --output /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/qrc_topdash_raw_qml_0.cpp --name topdash_raw_qml_0 /home/dxle/dev/desktop-projects/dashboard/build/.qt/rcc/topdash_raw_qml_0.qrc
   DESC = Running rcc for resource topdash_raw_qml_0
   restat = 1
@@ -348,21 +420,21 @@ build CMakeFiles/topdash_qmltyperegistration | ${cmake_ninja_workdir}CMakeFiles/
 #############################################
 # Custom command for CMakeFiles/topdash_qmllint
 
-build CMakeFiles/topdash_qmllint | ${cmake_ninja_workdir}CMakeFiles/topdash_qmllint: CUSTOM_COMMAND /usr/lib/qt6/bin/qmllint /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml .rcc/qmllint/topdash.rsp || all_qmltyperegistrations topdash_qmltyperegistration
+build CMakeFiles/topdash_qmllint | ${cmake_ninja_workdir}CMakeFiles/topdash_qmllint: CUSTOM_COMMAND /usr/lib/qt6/bin/qmllint /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml /home/dxle/dev/desktop-projects/dashboard/qml/CalendarView.qml /home/dxle/dev/desktop-projects/dashboard/qml/StatsCard.qml /home/dxle/dev/desktop-projects/dashboard/qml/TasksView.qml /home/dxle/dev/desktop-projects/dashboard/qml/ProfileCard.qml .rcc/qmllint/topdash.rsp || all_qmltyperegistrations topdash_qmltyperegistration
   COMMAND = cd /home/dxle/dev/desktop-projects/dashboard && /usr/lib/qt6/bin/qmllint @/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmllint/topdash.rsp
 
 
 #############################################
 # Custom command for CMakeFiles/topdash_qmllint_json
 
-build CMakeFiles/topdash_qmllint_json | ${cmake_ninja_workdir}CMakeFiles/topdash_qmllint_json: CUSTOM_COMMAND /usr/lib/qt6/bin/qmllint /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml .rcc/qmllint/topdash_json.rsp || all_qmltyperegistrations topdash_qmltyperegistration
+build CMakeFiles/topdash_qmllint_json | ${cmake_ninja_workdir}CMakeFiles/topdash_qmllint_json: CUSTOM_COMMAND /usr/lib/qt6/bin/qmllint /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml /home/dxle/dev/desktop-projects/dashboard/qml/CalendarView.qml /home/dxle/dev/desktop-projects/dashboard/qml/StatsCard.qml /home/dxle/dev/desktop-projects/dashboard/qml/TasksView.qml /home/dxle/dev/desktop-projects/dashboard/qml/ProfileCard.qml .rcc/qmllint/topdash_json.rsp || all_qmltyperegistrations topdash_qmltyperegistration
   COMMAND = cd /home/dxle/dev/desktop-projects/dashboard && /usr/lib/qt6/bin/qmllint @/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmllint/topdash_json.rsp
 
 
 #############################################
 # Custom command for CMakeFiles/topdash_qmllint_module
 
-build CMakeFiles/topdash_qmllint_module | ${cmake_ninja_workdir}CMakeFiles/topdash_qmllint_module: CUSTOM_COMMAND /usr/lib/qt6/bin/qmllint /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml .rcc/qmllint/topdash_module.rsp || all_qmltyperegistrations topdash_qmltyperegistration
+build CMakeFiles/topdash_qmllint_module | ${cmake_ninja_workdir}CMakeFiles/topdash_qmllint_module: CUSTOM_COMMAND /usr/lib/qt6/bin/qmllint /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml /home/dxle/dev/desktop-projects/dashboard/qml/CalendarView.qml /home/dxle/dev/desktop-projects/dashboard/qml/StatsCard.qml /home/dxle/dev/desktop-projects/dashboard/qml/TasksView.qml /home/dxle/dev/desktop-projects/dashboard/qml/ProfileCard.qml .rcc/qmllint/topdash_module.rsp || all_qmltyperegistrations topdash_qmltyperegistration
   COMMAND = cd /home/dxle/dev/desktop-projects/dashboard && /usr/lib/qt6/bin/qmllint @/home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmllint/topdash_module.rsp
 
 
@@ -375,7 +447,7 @@ build CMakeFiles/topdash_copy_qml | ${cmake_ninja_workdir}CMakeFiles/topdash_cop
 #############################################
 # Custom command for .qt/topdash_qml.txt
 
-build .qt/topdash_qml.txt | ${cmake_ninja_workdir}.qt/topdash_qml.txt: CUSTOM_COMMAND /usr/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml
+build .qt/topdash_qml.txt | ${cmake_ninja_workdir}.qt/topdash_qml.txt: CUSTOM_COMMAND /usr/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml /home/dxle/dev/desktop-projects/dashboard/qml/CalendarView.qml /home/dxle/dev/desktop-projects/dashboard/qml/StatsCard.qml /home/dxle/dev/desktop-projects/dashboard/qml/TasksView.qml /home/dxle/dev/desktop-projects/dashboard/qml/ProfileCard.qml
   COMMAND = cd /home/dxle/dev/desktop-projects/dashboard/build && /usr/bin/cmake -DFILES_INFO_PATH=/home/dxle/dev/desktop-projects/dashboard/build/.qt/topdash_qml.cmake -P /usr/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
   DESC = Copying topdash qml sources into build dir
   restat = 1
@@ -420,7 +492,7 @@ build CMakeFiles/module_topdash_aotstats_target | ${cmake_ninja_workdir}CMakeFil
 #############################################
 # Custom command for .rcc/qmlcache/module_topdash.aotstats
 
-build .rcc/qmlcache/module_topdash.aotstats | ${cmake_ninja_workdir}.rcc/qmlcache/module_topdash.aotstats: CUSTOM_COMMAND .rcc/qmlcache/topdash_qml/Main_qml.cpp.aotstats .rcc/qmlcache/module_topdash.aotstatslist || topdash_qmltyperegistration
+build .rcc/qmlcache/module_topdash.aotstats | ${cmake_ninja_workdir}.rcc/qmlcache/module_topdash.aotstats: CUSTOM_COMMAND .rcc/qmlcache/topdash_qml/Main_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/CalendarView_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/StatsCard_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/TasksView_qml.cpp.aotstats .rcc/qmlcache/topdash_qml/ProfileCard_qml.cpp.aotstats .rcc/qmlcache/module_topdash.aotstatslist || topdash_qmltyperegistration
   COMMAND = cd /home/dxle/dev/desktop-projects/dashboard/build && /usr/lib/qt6/qmlaotstats aggregate /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/module_topdash.aotstatslist /home/dxle/dev/desktop-projects/dashboard/build/.rcc/qmlcache/module_topdash.aotstats
   DESC = Generating .rcc/qmlcache/module_topdash.aotstats
   restat = 1
@@ -451,7 +523,7 @@ build CMakeFiles/topdash_qmlimportscan | ${cmake_ninja_workdir}CMakeFiles/topdas
 #############################################
 # Custom command for .qt/qml_imports/topdash_build.cmake
 
-build .qt/qml_imports/topdash_build.cmake | ${cmake_ninja_workdir}.qt/qml_imports/topdash_build.cmake: CUSTOM_COMMAND /usr/lib/qt6/qmlimportscanner .qt/rcc/qmake_TopDash.qrc .qt/rcc/topdash_raw_qml_0.qrc /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml
+build .qt/qml_imports/topdash_build.cmake | ${cmake_ninja_workdir}.qt/qml_imports/topdash_build.cmake: CUSTOM_COMMAND /usr/lib/qt6/qmlimportscanner .qt/rcc/qmake_TopDash.qrc .qt/rcc/topdash_raw_qml_0.qrc /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml /home/dxle/dev/desktop-projects/dashboard/qml/CalendarView.qml /home/dxle/dev/desktop-projects/dashboard/qml/StatsCard.qml /home/dxle/dev/desktop-projects/dashboard/qml/TasksView.qml /home/dxle/dev/desktop-projects/dashboard/qml/ProfileCard.qml
   COMMAND = cd /home/dxle/dev/desktop-projects/dashboard && /usr/lib/qt6/qmlimportscanner @/home/dxle/dev/desktop-projects/dashboard/build/.qt/qml_imports/topdash_build.rsp
   DESC = Running qmlimportscanner for topdash
   restat = 1

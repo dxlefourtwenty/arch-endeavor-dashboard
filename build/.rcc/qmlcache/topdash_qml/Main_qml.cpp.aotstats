@@ -18,7 +18,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "onActiveChanged",
-                            "line": 29,
+                            "line": 27,
                             "message": ""
                         },
                         {
@@ -26,87 +26,95 @@
                             "column": 25,
                             "durationMicroseconds": 0,
                             "functionName": "theme",
-                            "line": 44,
+                            "line": 37,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 25,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "cBg",
-                            "line": 46,
+                            "line": 39,
                             "message": "Cannot load property bg from (component in /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml)::theme with type QVariant."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 29,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "cOpacity",
-                            "line": 47,
+                            "line": 40,
                             "message": "Cannot load property opacity from (component in /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml)::theme with type QVariant."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 27,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "cRadius",
-                            "line": 48,
+                            "line": 41,
                             "message": "Cannot load property radius from (component in /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml)::theme with type QVariant."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 32,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "cBorderWidth",
-                            "line": 49,
+                            "line": 42,
                             "message": "Cannot load property borderWidth from (component in /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml)::theme with type QVariant."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 29,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "cBorder",
-                            "line": 50,
+                            "line": 43,
                             "message": "Cannot load property border from (component in /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml)::theme with type QVariant."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 25,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "cFg",
-                            "line": 51,
+                            "line": 44,
                             "message": "Cannot load property fg from (component in /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml)::theme with type QVariant."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 28,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "cMuted",
-                            "line": 52,
+                            "line": 45,
                             "message": "Cannot load property muted from (component in /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml)::theme with type QVariant."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 28,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "cFont",
-                            "line": 53,
+                            "line": 46,
                             "message": "Cannot load property font from (component in /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml)::theme with type QVariant."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 29,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "cFontSize",
-                            "line": 54,
+                            "line": 47,
                             "message": "Cannot load property fontSize from (component in /home/dxle/dev/desktop-projects/dashboard/qml/Main.qml)::theme with type QVariant."
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 5,
+                            "durationMicroseconds": 0,
+                            "functionName": "reloadTheme",
+                            "line": 49,
+                            "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 13,
                             "durationMicroseconds": 0,
                             "functionName": "height",
-                            "line": 59,
+                            "line": 55,
                             "message": ""
                         },
                         {
@@ -114,7 +122,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "minimumHeight",
-                            "line": 60,
+                            "line": 56,
                             "message": ""
                         },
                         {
@@ -122,7 +130,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "maximumHeight",
-                            "line": 61,
+                            "line": 57,
                             "message": ""
                         },
                         {
@@ -130,111 +138,7 @@
                             "column": 12,
                             "durationMicroseconds": 0,
                             "functionName": "flags",
-                            "line": 70,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 5,
-                            "durationMicroseconds": 0,
-                            "functionName": "reloadTheme",
-                            "line": 89,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 26,
-                            "durationMicroseconds": 0,
-                            "functionName": "today",
-                            "line": 95,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 28,
-                            "durationMicroseconds": 0,
-                            "functionName": "viewYear",
-                            "line": 96,
-                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 29,
-                            "durationMicroseconds": 0,
-                            "functionName": "viewMonth",
-                            "line": 97,
-                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 31,
-                            "durationMicroseconds": 0,
-                            "functionName": "selectedDay",
-                            "line": 98,
-                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 5,
-                            "durationMicroseconds": 0,
-                            "functionName": "daysInMonth",
-                            "line": 100,
-                            "message": "Functions without type annotations won't be compiled"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 5,
-                            "durationMicroseconds": 0,
-                            "functionName": "firstWeekday",
-                            "line": 103,
-                            "message": "Functions without type annotations won't be compiled"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 5,
-                            "durationMicroseconds": 0,
-                            "functionName": "pad2",
-                            "line": 106,
-                            "message": "Functions without type annotations won't be compiled"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 5,
-                            "durationMicroseconds": 0,
-                            "functionName": "selectedKey",
-                            "line": 107,
-                            "message": "function without return type annotation returns QString. This may prevent proper compilation to Cpp."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 5,
-                            "durationMicroseconds": 0,
-                            "functionName": "loadTasks",
-                            "line": 114,
-                            "message": "Instruction \"generate_StoreLocal\" not implemented"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 24,
-                            "durationMicroseconds": 0,
-                            "functionName": "onViewYearChanged",
-                            "line": 135,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 25,
-                            "durationMicroseconds": 0,
-                            "functionName": "onViewMonthChanged",
-                            "line": 136,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 27,
-                            "durationMicroseconds": 0,
-                            "functionName": "onSelectedDayChanged",
-                            "line": 137,
+                            "line": 62,
                             "message": ""
                         },
                         {
@@ -242,7 +146,7 @@
                             "column": 17,
                             "durationMicroseconds": 0,
                             "functionName": "source",
-                            "line": 39,
+                            "line": 33,
                             "message": ""
                         },
                         {
@@ -250,7 +154,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "layer",
-                            "line": 74,
+                            "line": 65,
                             "message": ""
                         },
                         {
@@ -258,7 +162,7 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "anchors",
-                            "line": 75,
+                            "line": 66,
                             "message": ""
                         },
                         {
@@ -266,7 +170,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "keyboardInteractivity",
-                            "line": 77,
+                            "line": 68,
                             "message": ""
                         },
                         {
@@ -274,7 +178,7 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "top",
-                            "line": 73,
+                            "line": 64,
                             "message": ""
                         },
                         {
@@ -282,7 +186,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "interval",
-                            "line": 82,
+                            "line": 74,
                             "message": ""
                         },
                         {
@@ -290,15 +194,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "onTriggered",
-                            "line": 84,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 28,
-                            "durationMicroseconds": 0,
-                            "functionName": "onCompleted",
-                            "line": 138,
+                            "line": 76,
                             "message": ""
                         },
                         {
@@ -306,7 +202,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 144,
+                            "line": 81,
                             "message": ""
                         },
                         {
@@ -314,7 +210,7 @@
                             "column": 25,
                             "durationMicroseconds": 0,
                             "functionName": "onPressed",
-                            "line": 148,
+                            "line": 85,
                             "message": ""
                         },
                         {
@@ -322,7 +218,7 @@
                             "column": 25,
                             "durationMicroseconds": 0,
                             "functionName": "onPressed",
-                            "line": 148,
+                            "line": 85,
                             "message": ""
                         },
                         {
@@ -330,7 +226,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 154,
+                            "line": 91,
                             "message": ""
                         },
                         {
@@ -338,31 +234,31 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "y",
-                            "line": 158,
+                            "line": 96,
                             "message": ""
                         },
                         {
-                            "codegenResult": 2,
+                            "codegenResult": 0,
                             "column": 21,
                             "durationMicroseconds": 0,
                             "functionName": "radius",
-                            "line": 161,
-                            "message": "Cannot access value for name cRadius"
+                            "line": 99,
+                            "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 162,
-                            "message": "Cannot access value for name cBg"
+                            "line": 100,
+                            "message": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: call to method rgba, returning QVariant -> QColor stored as QVariant"
                         },
                         {
                             "codegenResult": 0,
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalCenter",
-                            "line": 156,
+                            "line": 93,
                             "message": ""
                         },
                         {
@@ -370,7 +266,7 @@
                             "column": 57,
                             "durationMicroseconds": 0,
                             "functionName": "duration",
-                            "line": 159,
+                            "line": 97,
                             "message": ""
                         },
                         {
@@ -378,39 +274,79 @@
                             "column": 82,
                             "durationMicroseconds": 0,
                             "functionName": "type",
-                            "line": 159,
+                            "line": 97,
                             "message": ""
                         },
                         {
-                            "codegenResult": 2,
+                            "codegenResult": 0,
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 166,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 148,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 166,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 72,
-                            "durationMicroseconds": 0,
-                            "functionName": "left",
-                            "line": 166,
+                            "line": 104,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 98,
+                            "column": 57,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 104,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 86,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
+                            "line": 104,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 105,
                             "durationMicroseconds": 0,
                             "functionName": "top",
-                            "line": 166,
+                            "line": 104,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 125,
+                            "durationMicroseconds": 0,
+                            "functionName": "bottom",
+                            "line": 104,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 105,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 57,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 105,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 87,
+                            "durationMicroseconds": 0,
+                            "functionName": "right",
+                            "line": 105,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 106,
+                            "durationMicroseconds": 0,
+                            "functionName": "top",
+                            "line": 105,
                             "message": ""
                         },
                         {
@@ -418,760 +354,216 @@
                             "column": 126,
                             "durationMicroseconds": 0,
                             "functionName": "bottom",
+                            "line": 105,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 33,
+                            "durationMicroseconds": 0,
+                            "functionName": "height",
+                            "line": 106,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 58,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 106,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 87,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
+                            "line": 106,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 107,
+                            "durationMicroseconds": 0,
+                            "functionName": "right",
+                            "line": 106,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 129,
+                            "durationMicroseconds": 0,
+                            "functionName": "bottom",
+                            "line": 106,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 109,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 30,
+                            "durationMicroseconds": 0,
+                            "functionName": "cFg",
+                            "line": 125,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "cFont",
+                            "line": 126,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "cFontSize",
+                            "line": 127,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "cBorder",
+                            "line": 128,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 0,
+                            "functionName": "cBorderWidth",
+                            "line": 129,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 30,
+                            "durationMicroseconds": 0,
+                            "functionName": "cFg",
+                            "line": 135,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "cFont",
+                            "line": 136,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "cFontSize",
+                            "line": 137,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 30,
+                            "durationMicroseconds": 0,
+                            "functionName": "cFg",
+                            "line": 162,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 33,
+                            "durationMicroseconds": 0,
+                            "functionName": "cMuted",
+                            "line": 163,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "cFont",
+                            "line": 164,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "cFontSize",
+                            "line": 165,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 30,
+                            "durationMicroseconds": 0,
+                            "functionName": "cBg",
                             "line": 166,
                             "message": ""
                         },
                         {
-                            "codegenResult": 2,
-                            "column": 32,
-                            "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 167,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 150,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 167,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
                             "codegenResult": 0,
-                            "column": 73,
+                            "column": 34,
                             "durationMicroseconds": 0,
-                            "functionName": "right",
+                            "functionName": "cBorder",
                             "line": 167,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 100,
+                            "column": 39,
                             "durationMicroseconds": 0,
-                            "functionName": "top",
-                            "line": 167,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 128,
-                            "durationMicroseconds": 0,
-                            "functionName": "bottom",
-                            "line": 167,
+                            "functionName": "cBorderWidth",
+                            "line": 168,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "onSelectedKeyChanged",
+                            "line": 171,
+                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 30,
+                            "durationMicroseconds": 0,
+                            "functionName": "cFg",
+                            "line": 179,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
                             "column": 33,
                             "durationMicroseconds": 0,
-                            "functionName": "height",
-                            "line": 168,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 153,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 168,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 73,
-                            "durationMicroseconds": 0,
-                            "functionName": "left",
-                            "line": 168,
+                            "functionName": "cMuted",
+                            "line": 180,
                             "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 101,
-                            "durationMicroseconds": 0,
-                            "functionName": "right",
-                            "line": 168,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 131,
-                            "durationMicroseconds": 0,
-                            "functionName": "bottom",
-                            "line": 168,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 31,
-                            "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 171,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 47,
-                            "durationMicroseconds": 0,
-                            "functionName": "centerIn",
-                            "line": 188,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 45,
-                            "durationMicroseconds": 0,
-                            "functionName": "radius",
-                            "line": 200,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 51,
-                            "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 202,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 51,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 203,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 49,
-                            "durationMicroseconds": 0,
-                            "functionName": "source",
-                            "line": 207,
-                            "message": "Cannot access value for name AppConfig"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 51,
-                            "durationMicroseconds": 0,
-                            "functionName": "fillMode",
-                            "line": 209,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 55,
-                            "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 206,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 45,
-                            "durationMicroseconds": 0,
-                            "functionName": "radius",
-                            "line": 216,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 51,
-                            "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 215,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 51,
-                            "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 218,
-                            "message": "Cannot access value for name cBorderWidth"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 51,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 219,
-                            "message": "Cannot access value for name cBorder"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 44,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 226,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 46,
-                            "durationMicroseconds": 0,
-                            "functionName": "visible",
-                            "line": 229,
-                            "message": "Cannot access value for name AppConfig"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 55,
-                            "durationMicroseconds": 0,
-                            "functionName": "centerIn",
-                            "line": 224,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 50,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 227,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 39,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 234,
-                            "message": "Cannot access value for name AppConfig"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 40,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 235,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 54,
-                            "durationMicroseconds": 0,
-                            "functionName": "horizontalAlignment",
-                            "line": 238,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 46,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 236,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 49,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 237,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 29,
-                            "durationMicroseconds": 0,
-                            "functionName": "line",
-                            "line": 253,
-                            "message": "Functions without type annotations won't be compiled"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 43,
-                            "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 250,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 39,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 256,
-                            "message": "Cannot access value for name SystemInfo"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 40,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 257,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 46,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 258,
-                            "message": "Cannot access value for name cFont"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 49,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 259,
-                            "message": "Cannot access value for name cFontSize"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 39,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 263,
-                            "message": "Cannot access value for name SystemInfo"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 40,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 264,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 46,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 265,
-                            "message": "Cannot access value for name cFont"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 49,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 266,
-                            "message": "Cannot access value for name cFontSize"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 39,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 270,
-                            "message": "Cannot access value for name SystemInfo"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 40,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 271,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 46,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 272,
-                            "message": "Cannot access value for name cFont"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 49,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 273,
-                            "message": "Cannot access value for name cFontSize"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 39,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 277,
-                            "message": "Cannot access value for name SystemInfo"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 40,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 278,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 46,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 279,
-                            "message": "Cannot access value for name cFont"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 49,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 280,
-                            "message": "Cannot access value for name cFontSize"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 40,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 298,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 35,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 306,
-                            "message": "Cannot access value for name viewYear"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 36,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 307,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 50,
-                            "durationMicroseconds": 0,
-                            "functionName": "horizontalAlignment",
-                            "line": 310,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 42,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 308,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 45,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 309,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 40,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 314,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 36,
-                            "durationMicroseconds": 0,
-                            "functionName": "model",
-                            "line": 327,
-                            "message": "Cannot generate efficient code for storing an array in a non-sequence type"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 39,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 330,
-                            "message": "Cannot access value for name modelData"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 40,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 331,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 54,
-                            "durationMicroseconds": 0,
-                            "functionName": "horizontalAlignment",
-                            "line": 334,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 46,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 332,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 49,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 333,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 44,
-                            "durationMicroseconds": 0,
-                            "functionName": "lead",
-                            "line": 347,
-                            "message": "Cannot access value for name viewYear"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 43,
-                            "durationMicroseconds": 0,
-                            "functionName": "dim",
-                            "line": 348,
-                            "message": "Cannot access value for name viewYear"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 36,
-                            "durationMicroseconds": 0,
-                            "functionName": "model",
-                            "line": 352,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 51,
-                            "durationMicroseconds": 0,
-                            "functionName": "idx",
-                            "line": 357,
-                            "message": "Cannot access value for name index"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 54,
-                            "durationMicroseconds": 0,
-                            "functionName": "dayNum",
-                            "line": 358,
-                            "message": "Cannot access value for name calGrid"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 56,
-                            "durationMicroseconds": 0,
-                            "functionName": "inMonth",
-                            "line": 359,
-                            "message": "Cannot access value for name calGrid"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 57,
-                            "durationMicroseconds": 0,
-                            "functionName": "selected",
-                            "line": 360,
-                            "message": "Cannot access value for name selectedDay"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 40,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 363,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 47,
-                            "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 364,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 47,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 365,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 43,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 369,
-                            "message": "Cannot access value for name inMonth"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 44,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 370,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 55,
-                            "durationMicroseconds": 0,
-                            "functionName": "centerIn",
-                            "line": 368,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 50,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 371,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 53,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 372,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 46,
-                            "durationMicroseconds": 0,
-                            "functionName": "enabled",
-                            "line": 377,
-                            "message": "Cannot access value for name inMonth"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 48,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 378,
-                            "message": "Cannot access value for name dayNum"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 51,
-                            "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 376,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 31,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 389,
-                            "message": "method selectedKey cannot be resolved."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 32,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 390,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 38,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 391,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 41,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 392,
-                            "message": "Cannot access value for name theme"
                         },
                         {
                             "codegenResult": 0,
                             "column": 32,
                             "durationMicroseconds": 0,
-                            "functionName": "model",
-                            "line": 398,
+                            "functionName": "cFont",
+                            "line": 181,
                             "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 35,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 403,
-                            "message": "Cannot access value for name model"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 36,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 404,
-                            "message": "Cannot access value for name theme"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 39,
-                            "durationMicroseconds": 0,
-                            "functionName": "wrapMode",
-                            "line": 407,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 42,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 405,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 45,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 406,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 38,
-                            "durationMicroseconds": 0,
-                            "functionName": "visible",
-                            "line": 412,
-                            "message": "Cannot access value for name tasksModel"
-                        },
-                        {
-                            "codegenResult": 2,
                             "column": 36,
                             "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 414,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 42,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 415,
-                            "message": "Cannot access value for name theme"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 45,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 416,
-                            "message": "Cannot access value for name theme"
+                            "functionName": "cFontSize",
+                            "line": 182,
+                            "message": ""
                         }
                     ],
                     "filePath": "/home/dxle/dev/desktop-projects/dashboard/qml/Main.qml"
