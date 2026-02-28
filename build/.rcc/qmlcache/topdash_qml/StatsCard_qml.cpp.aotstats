@@ -120,7 +120,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 0,
+                            "durationMicroseconds": 2000,
                             "functionName": "color",
                             "line": 40,
                             "message": ""

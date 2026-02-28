@@ -88,22 +88,50 @@ Window {
 
         Rectangle {
             id: panel
-            width: stage.width > 10 ? Math.min(stage.width * 0.75, 900) : 900
+            width: stage.width > 10 ? Math.min(stage.width * 0.75, 700) : 700
             height: 520
             anchors.horizontalCenter: parent.horizontalCenter
             clip: true
 
             y: win.open ? 0 : (-height - 12)
-            Behavior on y { NumberAnimation { duration: win.animMs; easing.type: Easing.OutCubic } }
+            Behavior on y { 
+                NumberAnimation { 
+                  duration: win.animMs; 
+                  easing.type: Easing.OutCubic 
+                } 
+            }
 
             radius: win.cRadius
             color: Qt.rgba(win.cBg.r, win.cBg.g, win.cBg.b, win.cOpacity)
             border.width: 0
 
             // sides + bottom borders
-            Rectangle { width: win.cBorderWidth; color: win.cBorder; anchors { left: parent.left;  top: parent.top; bottom: parent.bottom } }
-            Rectangle { width: win.cBorderWidth; color: win.cBorder; anchors { right: parent.right; top: parent.top; bottom: parent.bottom } }
-            Rectangle { height: win.cBorderWidth; color: win.cBorder; anchors { left: parent.left; right: parent.right; bottom: parent.bottom } }
+            Rectangle { 
+                width: win.cBorderWidth; 
+                color: win.cBorder; 
+                anchors { 
+                    left: parent.left;  
+                    top: parent.top; 
+                    bottom: parent.bottom 
+                }
+            }
+            Rectangle { 
+              width: win.cBorderWidth; 
+              color: win.cBorder; 
+              anchors { right: parent.right; 
+                  top: parent.top; 
+                  bottom: parent.bottom 
+              }
+            }
+            Rectangle { 
+                height: win.cBorderWidth; 
+                color: win.cBorder; 
+                anchors { 
+                    left: parent.left; 
+                    right: parent.right; 
+                    bottom: parent.bottom 
+                } 
+            }
 
             RowLayout {
                 anchors.fill: parent
@@ -138,7 +166,9 @@ Window {
                     }
 
                     // push cards to top
-                    Item { Layout.fillHeight: true }
+                    Item { 
+                        Layout.fillHeight: true 
+                    }
                 }
 
                 // ---- Right column ----
@@ -166,6 +196,7 @@ Window {
                         cBg: win.cBg
                         cBorder: win.cBorder
                         cBorderWidth: win.cBorderWidth
+                        cRadius: win.cRadius
 
                         // property signal carries no argument -- read from the id
                         onSelectedKeyChanged: taskView.load(calView.selectedKey)

@@ -10,7 +10,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "today",
-                            "line": 25,
+                            "line": 26,
                             "message": ""
                         },
                         {
@@ -18,14 +18,6 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "viewYear",
-                            "line": 26,
-                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 34,
-                            "durationMicroseconds": 0,
-                            "functionName": "viewMonth",
                             "line": 27,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
@@ -33,7 +25,7 @@
                             "codegenResult": 2,
                             "column": 34,
                             "durationMicroseconds": 0,
-                            "functionName": "selectedDay",
+                            "functionName": "viewMonth",
                             "line": 28,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
@@ -41,16 +33,32 @@
                             "codegenResult": 2,
                             "column": 34,
                             "durationMicroseconds": 0,
-                            "functionName": "selectedKey",
-                            "line": 30,
+                            "functionName": "selectedDay",
+                            "line": 29,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "selectedKey",
+                            "line": 31,
+                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 42,
+                            "durationMicroseconds": 0,
+                            "functionName": "selectedDisplayDate",
+                            "line": 32,
+                            "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "daysInMonth",
-                            "line": 32,
+                            "line": 36,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -58,7 +66,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "firstWeekday",
-                            "line": 33,
+                            "line": 37,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -66,7 +74,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "pad2",
-                            "line": 34,
+                            "line": 38,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -74,7 +82,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 41,
+                            "line": 45,
                             "message": ""
                         },
                         {
@@ -82,87 +90,23 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 53,
+                            "line": 82,
                             "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 23,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 62,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 24,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 63,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 38,
-                            "durationMicroseconds": 0,
-                            "functionName": "horizontalAlignment",
-                            "line": 66,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 24,
-                            "durationMicroseconds": 0,
-                            "functionName": "elide",
-                            "line": 67,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 30,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 64,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 33,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 65,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 28,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 74,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 24,
-                            "durationMicroseconds": 0,
-                            "functionName": "model",
-                            "line": 88,
-                            "message": "Cannot generate efficient code for storing an array in a non-sequence type"
                         },
                         {
                             "codegenResult": 2,
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 91,
-                            "message": "Cannot access value for name modelData"
+                            "line": 63,
+                            "message": "Cannot access value for name prevBtn"
                         },
                         {
                             "codegenResult": 2,
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 92,
+                            "line": 64,
                             "message": "Cannot access value for name root"
                         },
                         {
@@ -170,7 +114,15 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 95,
+                            "line": 67,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 68,
                             "message": ""
                         },
                         {
@@ -178,7 +130,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "family",
-                            "line": 93,
+                            "line": 65,
                             "message": "Cannot access value for name root"
                         },
                         {
@@ -186,7 +138,207 @@
                             "column": 37,
                             "durationMicroseconds": 0,
                             "functionName": "pixelSize",
+                            "line": 66,
+                            "message": "Cannot access value for name root"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 29,
+                            "durationMicroseconds": 0,
+                            "functionName": "radius",
+                            "line": 72,
+                            "message": "Cannot access value for name root"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 73,
+                            "message": "Cannot access value for name prevBtn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 79,
+                            "message": "Cannot access value for name root"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 23,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 91,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 92,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 38,
+                            "durationMicroseconds": 0,
+                            "functionName": "horizontalAlignment",
+                            "line": 95,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "elide",
+                            "line": 96,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 30,
+                            "durationMicroseconds": 0,
+                            "functionName": "family",
+                            "line": 93,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 33,
+                            "durationMicroseconds": 0,
+                            "functionName": "pixelSize",
                             "line": 94,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 128,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 27,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 109,
+                            "message": "Cannot access value for name nextBtn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 110,
+                            "message": "Cannot access value for name root"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 42,
+                            "durationMicroseconds": 0,
+                            "functionName": "horizontalAlignment",
+                            "line": 113,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 114,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "family",
+                            "line": 111,
+                            "message": "Cannot access value for name root"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "pixelSize",
+                            "line": 112,
+                            "message": "Cannot access value for name root"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 29,
+                            "durationMicroseconds": 0,
+                            "functionName": "radius",
+                            "line": 118,
+                            "message": "Cannot access value for name root"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 119,
+                            "message": "Cannot access value for name nextBtn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 125,
+                            "message": "Cannot access value for name root"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "model",
+                            "line": 142,
+                            "message": "Cannot generate efficient code for storing an array in a non-sequence type"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 27,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 145,
+                            "message": "Cannot access value for name modelData"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 146,
+                            "message": "Cannot access value for name root"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 42,
+                            "durationMicroseconds": 0,
+                            "functionName": "horizontalAlignment",
+                            "line": 149,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "family",
+                            "line": 147,
+                            "message": "Cannot access value for name root"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "pixelSize",
+                            "line": 148,
                             "message": "Cannot access value for name root"
                         },
                         {
@@ -194,15 +346,15 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "lead",
-                            "line": 110,
+                            "line": 164,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
                             "codegenResult": 2,
                             "column": 32,
-                            "durationMicroseconds": 2000,
+                            "durationMicroseconds": 0,
                             "functionName": "dim",
-                            "line": 111,
+                            "line": 165,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
@@ -210,7 +362,7 @@
                             "column": 47,
                             "durationMicroseconds": 0,
                             "functionName": "dayNum",
-                            "line": 119,
+                            "line": 173,
                             "message": "Cannot access value for name index"
                         },
                         {
@@ -218,7 +370,7 @@
                             "column": 47,
                             "durationMicroseconds": 0,
                             "functionName": "inMonth",
-                            "line": 120,
+                            "line": 174,
                             "message": "Cannot access value for name calGrid"
                         },
                         {
@@ -226,7 +378,7 @@
                             "column": 47,
                             "durationMicroseconds": 0,
                             "functionName": "isSelected",
-                            "line": 121,
+                            "line": 175,
                             "message": "Cannot access value for name root"
                         },
                         {
@@ -234,7 +386,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 124,
+                            "line": 178,
                             "message": "Cannot access value for name root"
                         },
                         {
@@ -242,7 +394,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 125,
+                            "line": 179,
                             "message": "Cannot access value for name root"
                         },
                         {
@@ -250,7 +402,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 126,
+                            "line": 180,
                             "message": "Cannot access value for name root"
                         },
                         {
@@ -258,7 +410,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 130,
+                            "line": 184,
                             "message": "Cannot access value for name inMonth"
                         },
                         {
@@ -266,7 +418,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 131,
+                            "line": 185,
                             "message": "Cannot access value for name root"
                         },
                         {
@@ -274,7 +426,7 @@
                             "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 129,
+                            "line": 183,
                             "message": ""
                         },
                         {
@@ -282,7 +434,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "family",
-                            "line": 132,
+                            "line": 186,
                             "message": "Cannot access value for name root"
                         },
                         {
@@ -290,7 +442,7 @@
                             "column": 41,
                             "durationMicroseconds": 0,
                             "functionName": "pixelSize",
-                            "line": 133,
+                            "line": 187,
                             "message": "Cannot access value for name root"
                         },
                         {
@@ -298,7 +450,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 138,
+                            "line": 192,
                             "message": "Cannot access value for name inMonth"
                         },
                         {
@@ -306,7 +458,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 139,
+                            "line": 193,
                             "message": "Cannot access value for name root"
                         },
                         {
@@ -314,7 +466,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 137,
+                            "line": 191,
                             "message": ""
                         },
                         {
@@ -322,7 +474,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 148,
+                            "line": 202,
                             "message": ""
                         },
                         {
@@ -330,7 +482,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 149,
+                            "line": 203,
                             "message": ""
                         },
                         {
@@ -338,7 +490,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 152,
+                            "line": 206,
                             "message": ""
                         },
                         {
@@ -346,7 +498,7 @@
                             "column": 26,
                             "durationMicroseconds": 0,
                             "functionName": "family",
-                            "line": 150,
+                            "line": 204,
                             "message": ""
                         },
                         {
@@ -354,7 +506,7 @@
                             "column": 29,
                             "durationMicroseconds": 0,
                             "functionName": "pixelSize",
-                            "line": 151,
+                            "line": 205,
                             "message": ""
                         }
                     ],

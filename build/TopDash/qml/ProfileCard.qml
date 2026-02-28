@@ -1,4 +1,5 @@
 import QtQuick
+import Qt5Compat.GraphicalEffects
 
 // ProfileCard.qml
 
@@ -22,23 +23,30 @@ Rectangle {
             height: 96
             anchors.horizontalCenter: parent.horizontalCenter
 
-            // clip: true here only clips to the Item rectangle, not the circle.
-            // The clip must be on the Rectangle that has the radius.
-            Rectangle {
+            Item {
                 id: avatarCircle
                 width: 96
                 height: 96
-                radius: width / 2
-                clip: true                      // <-- this clips Image to the circle
-                border.width: root.cBorderWidth
-                border.color: root.cBorder
 
                 Image {
+                    id: avatarImage
                     anchors.fill: parent
                     source: AppConfig.profileImage.startsWith("file:")
                             ? AppConfig.profileImage
                             : "file://" + AppConfig.profileImage
                     fillMode: Image.PreserveAspectCrop
+                    visible: false
+                }
+
+                OpacityMask {
+                    anchors.fill: parent
+                    source: avatarImage
+                    visible: AppConfig.profileImage.toString().length > 0
+                    maskSource: Rectangle {
+                        width: avatarCircle.width
+                        height: avatarCircle.height
+                        radius: width / 2
+                    }
                 }
             }
 

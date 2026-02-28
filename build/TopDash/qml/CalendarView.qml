@@ -21,6 +21,7 @@ Item {
     property color  cBg:          "#111111"
     property color  cBorder:      "#444444"
     property int    cBorderWidth: 2
+    property int    cRadius:      0
 
     property date   today:       new Date()
     property int    viewYear:    today.getFullYear()
@@ -28,6 +29,9 @@ Item {
     property int    selectedDay: today.getDate()
 
     property string selectedKey: viewYear + "-" + pad2(viewMonth + 1) + "-" + pad2(selectedDay)
+    property string selectedDisplayDate: Qt.formatDate(
+                                            new Date(viewYear, viewMonth, selectedDay),
+                                            "dddd - MMMM d, yyyy")
 
     function daysInMonth(y, m0)  { return new Date(y, m0 + 1, 0).getDate() }
     function firstWeekday(y, m0) { return new Date(y, m0, 1).getDay() }
@@ -47,9 +51,34 @@ Item {
             spacing: 6
 
             Button {
+                id: prevBtn
                 text: "<"
                 Layout.preferredWidth: 32
                 Layout.minimumWidth: 32
+                Layout.preferredHeight: 32
+                Layout.minimumHeight: 32
+                hoverEnabled: true
+
+                contentItem: Text {
+                    text: prevBtn.text
+                    color: root.cFg
+                    font.family: root.cFont
+                    font.pixelSize: root.cFontSize
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+                background: Rectangle {
+                    radius: root.cRadius
+                    color: prevBtn.down
+                           ? Qt.rgba(root.cBg.r, root.cBg.g, root.cBg.b, 0.55)
+                           : (prevBtn.hovered
+                              ? Qt.rgba(root.cBg.r, root.cBg.g, root.cBg.b, 0.35)
+                              : "transparent")
+                    border.width: 0
+                    border.color: root.cBorder
+                }
+
                 onClicked: {
                     if (root.viewMonth === 0) { root.viewMonth = 11; root.viewYear -= 1 }
                     else root.viewMonth -= 1
@@ -68,9 +97,34 @@ Item {
             }
 
             Button {
+                id: nextBtn
                 text: ">"
                 Layout.preferredWidth: 32
                 Layout.minimumWidth: 32
+                Layout.preferredHeight: 32
+                Layout.minimumHeight: 32
+                hoverEnabled: true
+
+                contentItem: Text {
+                    text: nextBtn.text
+                    color: root.cFg
+                    font.family: root.cFont
+                    font.pixelSize: root.cFontSize
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+                background: Rectangle {
+                    radius: root.cRadius
+                    color: nextBtn.down
+                           ? Qt.rgba(root.cBg.r, root.cBg.g, root.cBg.b, 0.55)
+                           : (nextBtn.hovered
+                              ? Qt.rgba(root.cBg.r, root.cBg.g, root.cBg.b, 0.35)
+                              : "transparent")
+                    border.width: 0
+                    border.color: root.cBorder
+                }
+
                 onClicked: {
                     if (root.viewMonth === 11) { root.viewMonth = 0; root.viewYear += 1 }
                     else root.viewMonth += 1
@@ -145,7 +199,7 @@ Item {
         // Selected date label
         Text {
             Layout.fillWidth: true
-            text: "Selected: " + root.selectedKey
+            text: "Selected: " + root.selectedDisplayDate
             color: root.cFg
             font.family: root.cFont
             font.pixelSize: root.cFontSize - 2

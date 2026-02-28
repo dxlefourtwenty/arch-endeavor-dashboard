@@ -10,7 +10,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 17,
+                            "line": 18,
                             "message": ""
                         },
                         {
@@ -18,39 +18,15 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalCenter",
-                            "line": 23,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 25,
-                            "durationMicroseconds": 0,
-                            "functionName": "radius",
-                            "line": 31,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 31,
-                            "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 33,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 31,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 34,
+                            "line": 24,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 29,
-                            "durationMicroseconds": 1000,
+                            "durationMicroseconds": 0,
                             "functionName": "source",
-                            "line": 38,
+                            "line": 34,
                             "message": "Cannot access value for name AppConfig"
                         },
                         {
@@ -58,7 +34,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "fillMode",
-                            "line": 41,
+                            "line": 37,
                             "message": ""
                         },
                         {
@@ -66,12 +42,52 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 37,
+                            "line": 33,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 25,
+                            "column": 29,
+                            "durationMicroseconds": 0,
+                            "functionName": "source",
+                            "line": 43,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 30,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 44,
+                            "message": "Cannot access value for name AppConfig"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 42,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 46,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 33,
+                            "durationMicroseconds": 0,
+                            "functionName": "height",
+                            "line": 47,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 33,
                             "durationMicroseconds": 0,
                             "functionName": "radius",
                             "line": 48,
@@ -79,10 +95,18 @@
                         },
                         {
                             "codegenResult": 0,
+                            "column": 25,
+                            "durationMicroseconds": 0,
+                            "functionName": "radius",
+                            "line": 56,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 47,
+                            "line": 55,
                             "message": ""
                         },
                         {
@@ -90,7 +114,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 50,
+                            "line": 58,
                             "message": ""
                         },
                         {
@@ -98,7 +122,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 51,
+                            "line": 59,
                             "message": ""
                         },
                         {
@@ -106,7 +130,7 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 57,
+                            "line": 65,
                             "message": ""
                         },
                         {
@@ -114,7 +138,7 @@
                             "column": 26,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 60,
+                            "line": 68,
                             "message": "Cannot access value for name AppConfig"
                         },
                         {
@@ -122,7 +146,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 55,
+                            "line": 63,
                             "message": ""
                         },
                         {
@@ -130,7 +154,7 @@
                             "column": 30,
                             "durationMicroseconds": 0,
                             "functionName": "family",
-                            "line": 58,
+                            "line": 66,
                             "message": ""
                         },
                         {
@@ -138,7 +162,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 65,
+                            "line": 73,
                             "message": ""
                         },
                         {
@@ -146,7 +170,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 66,
+                            "line": 74,
                             "message": "Cannot access value for name AppConfig"
                         },
                         {
@@ -154,7 +178,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 67,
+                            "line": 75,
                             "message": ""
                         },
                         {
@@ -162,7 +186,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 70,
+                            "line": 78,
                             "message": ""
                         },
                         {
@@ -170,7 +194,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 71,
+                            "line": 79,
                             "message": ""
                         },
                         {
@@ -178,7 +202,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 72,
+                            "line": 80,
                             "message": ""
                         },
                         {
@@ -186,7 +210,7 @@
                             "column": 26,
                             "durationMicroseconds": 0,
                             "functionName": "family",
-                            "line": 68,
+                            "line": 76,
                             "message": ""
                         },
                         {
@@ -194,7 +218,7 @@
                             "column": 29,
                             "durationMicroseconds": 0,
                             "functionName": "pixelSize",
-                            "line": 69,
+                            "line": 77,
                             "message": ""
                         }
                     ],
