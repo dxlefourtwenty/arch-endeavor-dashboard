@@ -133,79 +133,82 @@ Window {
                 } 
             }
 
-            RowLayout {
+            GridLayout {
                 anchors.fill: parent
                 anchors.margins: 20
-                spacing: 18
+                columns: 2
+                columnSpacing: 18
+                rowSpacing: 18
 
-                // ---- Left column ----
-                ColumnLayout {
-                    id: leftCol
-                    Layout.minimumWidth: 220
-                    Layout.preferredWidth: 220
-                    Layout.maximumWidth: 220
-                    Layout.fillHeight: true
-                    spacing: 16
-
-                    ProfileCard {
-                        Layout.fillWidth: true
-                        Layout.preferredHeight: 200
-                        cFg: win.cFg
-                        cFont: win.cFont
-                        cFontSize: win.cFontSize
-                        cBorder: win.cBorder
-                        cBorderWidth: win.cBorderWidth
-                    }
-
-                    StatsCard {
-                        Layout.fillWidth: true
-                        Layout.preferredHeight: 120
-                        cFg: win.cFg
-                        cFont: win.cFont
-                        cFontSize: win.cFontSize
-                    }
-
-                    // push cards to top
-                    Item { 
-                        Layout.fillHeight: true 
-                    }
-                }
-
-                // ---- Right column ----
-                ColumnLayout {
-                    id: rightCol
+                ProfileCard {
+                    Layout.row: 0
+                    Layout.column: 0
                     Layout.fillWidth: true
                     Layout.fillHeight: true
-                    Layout.minimumWidth: 0
-                    Layout.preferredWidth: 0
-                    spacing: 10
+                    Layout.preferredWidth: 0.95
+                    Layout.preferredHeight: 1
+                    cFg: win.cFg
+                    cFont: win.cFont
+                    cFontSize: win.cFontSize
+                    cBorder: win.cBorder
+                    cBorderWidth: win.cBorderWidth
+                }
 
-                    CalendarView {
-                        id: calView
+                CalendarView {
+                    id: calView
+                    Layout.row: 0
+                    Layout.column: 1
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    Layout.preferredWidth: 1.55
+                    Layout.preferredHeight: 1
+
+                    cFg: win.cFg
+                    cMuted: win.cMuted
+                    cFont: win.cFont
+                    cFontSize: win.cFontSize
+                    cBg: win.cBg
+                    cBorder: win.cBorder
+                    cBorderWidth: win.cBorderWidth
+                    cRadius: win.cRadius
+
+                    // property signal carries no argument -- read from the id
+                    onSelectedKeyChanged: taskView.load(calView.selectedKey)
+                }
+
+                StatsCard {
+                    Layout.row: 1
+                    Layout.column: 0
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    Layout.preferredWidth: 0.95
+                    Layout.preferredHeight: 1
+                    cFg: win.cFg
+                    cFont: win.cFont
+                    cFontSize: win.cFontSize
+                }
+
+                ColumnLayout {
+                    Layout.row: 1
+                    Layout.column: 1
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    Layout.preferredWidth: 1.55
+                    Layout.preferredHeight: 1
+
+                    Text {
                         Layout.fillWidth: true
-                        Layout.minimumWidth: 0
-                        // Fixed height so the grid doesn't overflow the panel.
-                        // 6 rows * ~34px + header rows + labels ≈ 340px
-                        Layout.preferredHeight: 340
-                        Layout.maximumHeight: 340
-
-                        cFg: win.cFg
-                        cMuted: win.cMuted
-                        cFont: win.cFont
-                        cFontSize: win.cFontSize
-                        cBg: win.cBg
-                        cBorder: win.cBorder
-                        cBorderWidth: win.cBorderWidth
-                        cRadius: win.cRadius
-
-                        // property signal carries no argument -- read from the id
-                        onSelectedKeyChanged: taskView.load(calView.selectedKey)
+                        Layout.leftMargin: 30
+                        text: calView.selectedDisplayDate
+                        color: win.cFg
+                        font.family: win.cFont
+                        font.pixelSize: win.cFontSize - 2
+                        elide: Text.ElideRight
                     }
 
                     TasksView {
                         id: taskView
                         Layout.fillWidth: true
-                        Layout.minimumWidth: 0
                         Layout.fillHeight: true
                         cFg: win.cFg
                         cMuted: win.cMuted

@@ -196,14 +196,5 @@ Item {
             }
         }
 
-        // Selected date label
-        Text {
-            Layout.fillWidth: true
-            text: "Selected: " + root.selectedDisplayDate
-            color: root.cFg
-            font.family: root.cFont
-            font.pixelSize: root.cFontSize - 2
-            elide: Text.ElideRight
-        }
     }
 }

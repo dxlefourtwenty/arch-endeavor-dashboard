@@ -71,7 +71,7 @@ Rectangle {
 
         Text {
             width: root.width
-            text: "welcome\n" + AppConfig.username
+            text: AppConfig.username
             color: root.cFg
             font.family: root.cFont
             font.pixelSize: root.cFontSize

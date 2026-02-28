@@ -468,46 +468,6 @@
                             "functionName": "fill",
                             "line": 191,
                             "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 19,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 202,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 20,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 203,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 20,
-                            "durationMicroseconds": 0,
-                            "functionName": "elide",
-                            "line": 206,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 26,
-                            "durationMicroseconds": 0,
-                            "functionName": "family",
-                            "line": 204,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 29,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 205,
-                            "message": ""
                         }
                     ],
                     "filePath": "/home/dxle/dev/desktop-projects/dashboard/qml/CalendarView.qml"
