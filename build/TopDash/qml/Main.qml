@@ -51,11 +51,11 @@ Window {
         themeLoader.active = true
     }
 
-    property int panelH: 560
+    property int panelH: 450
     height: panelH
     minimumHeight: panelH
     maximumHeight: panelH
-    width: 900
+    width: 670
 
     visible: false
     color: "transparent"
@@ -88,8 +88,8 @@ Window {
 
         Rectangle {
             id: panel
-            width: stage.width > 10 ? Math.min(stage.width * 0.75, 700) : 700
-            height: 520
+            width: stage.width > 10 ? Math.min(stage.width * 0.75, 670) : 670
+            height: 410
             anchors.horizontalCenter: parent.horizontalCenter
             clip: true
 
@@ -135,10 +135,10 @@ Window {
 
             GridLayout {
                 anchors.fill: parent
-                anchors.margins: 20
+                anchors.margins: 16
                 columns: 2
-                columnSpacing: 18
-                rowSpacing: 18
+                columnSpacing: 14
+                rowSpacing: 0
 
                 ProfileCard {
                     Layout.row: 0
@@ -161,7 +161,7 @@ Window {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     Layout.preferredWidth: 1.55
-                    Layout.preferredHeight: 1
+                    Layout.preferredHeight: 1.50
 
                     cFg: win.cFg
                     cMuted: win.cMuted
@@ -183,6 +183,7 @@ Window {
                     Layout.fillHeight: true
                     Layout.preferredWidth: 0.95
                     Layout.preferredHeight: 1
+                    Layout.topMargin: -14
                     cFg: win.cFg
                     cFont: win.cFont
                     cFontSize: win.cFontSize
@@ -195,6 +196,7 @@ Window {
                     Layout.fillHeight: true
                     Layout.preferredWidth: 1.55
                     Layout.preferredHeight: 1
+                    Layout.topMargin: -14
 
                     Text {
                         Layout.fillWidth: true
@@ -202,7 +204,7 @@ Window {
                         text: calView.selectedDisplayDate
                         color: win.cFg
                         font.family: win.cFont
-                        font.pixelSize: win.cFontSize - 2
+                        font.pixelSize: win.cFontSize * 1.012
                         elide: Text.ElideRight
                     }
 

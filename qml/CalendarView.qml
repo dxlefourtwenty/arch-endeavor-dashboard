@@ -22,6 +22,7 @@ Item {
     property color  cBorder:      "#444444"
     property int    cBorderWidth: 2
     property int    cRadius:      0
+    property int    rightInset:   30
 
     property date   today:       new Date()
     property int    viewYear:    today.getFullYear()
@@ -43,7 +44,8 @@ Item {
     ColumnLayout {
         id: calColumn
         anchors.fill: parent
-        spacing: 6
+        anchors.rightMargin: root.rightInset
+        spacing: 4
 
         // Month navigation
         RowLayout {
@@ -139,7 +141,7 @@ Item {
             spacing: 0
 
             Repeater {
-                model: ["Su","Mo","Tu","We","Th","Fr","Sa"]
+                model: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
                 delegate: Text {
                     Layout.fillWidth: true
                     text: modelData
@@ -158,7 +160,7 @@ Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
             columns: 7
-            rowSpacing: 2
+            rowSpacing: 1
             columnSpacing: 2
 
             property int lead: root.firstWeekday(root.viewYear, root.viewMonth)

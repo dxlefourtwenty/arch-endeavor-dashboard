@@ -11,6 +11,7 @@ Rectangle {
     property int    cFontSize:    16
     property color  cBorder:      "#444444"
     property int    cBorderWidth: 2
+    property int    bottomPad:    24
 
     color: "transparent"
 
@@ -27,6 +28,7 @@ Rectangle {
                 id: avatarCircle
                 width: 96
                 height: 96
+                y: -10
 
                 Image {
                     id: avatarImage
@@ -78,6 +80,11 @@ Rectangle {
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WrapAnywhere
             elide: Text.ElideRight
+        }
+
+        Item {
+            width: 1
+            height: root.bottomPad
         }
     }
 }
