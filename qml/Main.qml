@@ -82,7 +82,7 @@ Window {
     property int tasksPaddingTop: 18
     property int tasksPaddingLeft: 18
     property int tasksPaddingRight: 18
-    property int tasksPaddingBottom: 18
+    property int tasksPaddingBottom: 24
 
     property real profileCardWidthWeight: 0.95
     property real profileCardHeightWeight: 1.0

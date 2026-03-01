@@ -1144,7 +1144,7 @@
                         {
                             "codegenResult": 0,
                             "column": 32,
-                            "durationMicroseconds": 2000,
+                            "durationMicroseconds": 0,
                             "functionName": "cFont",
                             "line": 360,
                             "message": ""
