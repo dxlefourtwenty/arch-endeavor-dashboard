@@ -4,6 +4,8 @@
 #include <QFileSystemWatcher>
 #include <QTimer>
 #include <QDir>
+#include <QFile>
+#include <QStringList>
 #include <csignal>
 #include <QQmlContext>
 #include "systeminfo.h"
@@ -43,15 +45,33 @@ int main(int argc, char *argv[])
 
     std::signal(SIGUSR1, onSigUsr1);
 
-    QString themePath =
-        QDir::homePath() + "/.config/dashboard/theme.qml";
+    QString themePath = QDir::homePath() + "/.config/dashboard/theme.qml";
+    QString stylePath = QDir::homePath() + "/.config/dashboard/style.qml";
+    QString tasksPath = QDir::homePath() + "/.config/dashboard/tasks.json";
+    QString tasksDirPath = QDir::homePath() + "/.config/dashboard";
 
-    QFileInfo info(themePath);
+    QDir().mkpath(tasksDirPath);
+    if (!QFileInfo::exists(tasksPath)) {
+        QFile tasksFile(tasksPath);
+        if (tasksFile.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
+            tasksFile.write("[]\n");
+            tasksFile.close();
+        }
+    }
 
-    QString realPath = info.canonicalFilePath();
+    auto canonicalOrOriginal = [](const QString &path) {
+        QFileInfo info(path);
+        QString real = info.canonicalFilePath();
+        return real.isEmpty() ? path : real;
+    };
 
-    QFileSystemWatcher *watcher =
-        new QFileSystemWatcher({realPath});
+    QStringList watchedPaths{
+        canonicalOrOriginal(themePath),
+        canonicalOrOriginal(stylePath)
+    };
+    watchedPaths.removeDuplicates();
+
+    QFileSystemWatcher *watcher = new QFileSystemWatcher(watchedPaths);
 
     // debounce timer (important for symlink swaps)
     QTimer *reloadTimer = new QTimer;
@@ -60,12 +80,18 @@ int main(int argc, char *argv[])
     QObject::connect(
         watcher,
         &QFileSystemWatcher::fileChanged,
-        [watcher, themePath, reloadTimer]() {
+        [watcher, themePath, stylePath, reloadTimer, canonicalOrOriginal]() {
+            QStringList latestPaths{
+                canonicalOrOriginal(themePath),
+                canonicalOrOriginal(stylePath)
+            };
+            latestPaths.removeDuplicates();
 
-            QFileInfo info(themePath);
-            QString newReal = info.canonicalFilePath();
-
-            watcher->addPath(newReal);   // reattach watcher
+            for (const QString &path : latestPaths) {
+                if (!watcher->files().contains(path)) {
+                    watcher->addPath(path); // reattach watcher
+                }
+            }
             reloadTimer->start(80);
         }
     );
@@ -77,6 +103,70 @@ int main(int argc, char *argv[])
             QMetaObject::invokeMethod(
                 root,
                 "reloadTheme",
+                Qt::QueuedConnection
+            );
+        }
+    );
+
+    QFileInfo tasksInfo(tasksPath);
+    QString watchedTasksPath = tasksInfo.canonicalFilePath();
+    if (watchedTasksPath.isEmpty()) {
+        watchedTasksPath = tasksPath;
+    }
+
+    QFileSystemWatcher *tasksWatcher = new QFileSystemWatcher(
+        QStringList{watchedTasksPath, tasksDirPath}
+    );
+
+    QTimer *tasksReloadTimer = new QTimer;
+    tasksReloadTimer->setSingleShot(true);
+
+    QObject::connect(
+        tasksWatcher,
+        &QFileSystemWatcher::fileChanged,
+        [tasksWatcher, tasksPath, tasksDirPath, tasksReloadTimer]() {
+            QFileInfo info(tasksPath);
+            QString pathToWatch = info.canonicalFilePath();
+            if (pathToWatch.isEmpty()) {
+                pathToWatch = tasksPath;
+            }
+
+            if (!tasksWatcher->files().contains(pathToWatch)) {
+                tasksWatcher->addPath(pathToWatch);
+            }
+            if (!tasksWatcher->directories().contains(tasksDirPath)) {
+                tasksWatcher->addPath(tasksDirPath);
+            }
+
+            tasksReloadTimer->start(60);
+        }
+    );
+
+    QObject::connect(
+        tasksWatcher,
+        &QFileSystemWatcher::directoryChanged,
+        [tasksWatcher, tasksPath, tasksReloadTimer]() {
+            QFileInfo info(tasksPath);
+            QString pathToWatch = info.canonicalFilePath();
+            if (pathToWatch.isEmpty()) {
+                pathToWatch = tasksPath;
+            }
+
+            if (!tasksWatcher->files().contains(pathToWatch)
+                && QFileInfo::exists(tasksPath)) {
+                tasksWatcher->addPath(pathToWatch);
+            }
+            tasksReloadTimer->start(60);
+        }
+    );
+
+    QObject::connect(
+        tasksReloadTimer,
+        &QTimer::timeout,
+        [root]() {
+            QMetaObject::invokeMethod(
+                root,
+                "reloadTasks",
                 Qt::QueuedConnection
             );
         }

@@ -42,6 +42,8 @@ template <> constexpr inline auto AppConfig::qt_create_metaobjectdata<qt_meta_ta
         "configChanged",
         "",
         "reload",
+        "tasksForDate",
+        "dateKey",
         "username",
         "profileImage"
     };
@@ -51,12 +53,16 @@ template <> constexpr inline auto AppConfig::qt_create_metaobjectdata<qt_meta_ta
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'reload'
         QtMocHelpers::MethodData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
+        // Method 'tasksForDate'
+        QtMocHelpers::MethodData<QStringList(const QString &) const>(4, 2, QMC::AccessPublic, QMetaType::QStringList, {{
+            { QMetaType::QString, 5 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'username'
-        QtMocHelpers::PropertyData<QString>(4, QMetaType::QString, QMC::DefaultPropertyFlags, 0),
+        QtMocHelpers::PropertyData<QString>(6, QMetaType::QString, QMC::DefaultPropertyFlags, 0),
         // property 'profileImage'
-        QtMocHelpers::PropertyData<QString>(5, QMetaType::QString, QMC::DefaultPropertyFlags, 0),
+        QtMocHelpers::PropertyData<QString>(7, QMetaType::QString, QMC::DefaultPropertyFlags, 0),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -80,6 +86,8 @@ void AppConfig::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         switch (_id) {
         case 0: _t->configChanged(); break;
         case 1: _t->reload(); break;
+        case 2: { QStringList _r = _t->tasksForDate((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast<QStringList*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
@@ -116,14 +124,14 @@ int AppConfig::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 3;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty

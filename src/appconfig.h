@@ -2,6 +2,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QStringList>
 
 class AppConfig : public QObject
 {
@@ -17,6 +18,7 @@ public:
     QString profileImage() const;
 
     Q_INVOKABLE void reload();
+    Q_INVOKABLE QStringList tasksForDate(const QString &dateKey) const;
 
 signals:
     void configChanged();

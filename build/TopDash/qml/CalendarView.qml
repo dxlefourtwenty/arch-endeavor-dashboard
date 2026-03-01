@@ -22,7 +22,6 @@ Item {
     property color  cBorder:      "#444444"
     property int    cBorderWidth: 2
     property int    cRadius:      0
-    property int    rightInset:   30
 
     property date   today:       new Date()
     property int    viewYear:    today.getFullYear()
@@ -37,6 +36,12 @@ Item {
     function daysInMonth(y, m0)  { return new Date(y, m0 + 1, 0).getDate() }
     function firstWeekday(y, m0) { return new Date(y, m0, 1).getDay() }
     function pad2(n)             { return (n < 10 ? "0" : "") + n }
+    function refreshToToday() {
+        root.today = new Date()
+        root.viewYear = root.today.getFullYear()
+        root.viewMonth = root.today.getMonth()
+        root.selectedDay = root.today.getDate()
+    }
 
     // No implicitHeight override -- let the parent layout control our height
     // via Layout.preferredHeight set in Main.qml.
@@ -44,7 +49,6 @@ Item {
     ColumnLayout {
         id: calColumn
         anchors.fill: parent
-        anchors.rightMargin: root.rightInset
         spacing: 4
 
         // Month navigation

@@ -2,14 +2,28 @@
     "classes": [
         {
             "className": "AppConfig",
-            "lineNumber": 6,
+            "lineNumber": 7,
             "methods": [
                 {
                     "access": "public",
                     "index": 1,
-                    "lineNumber": 19,
+                    "lineNumber": 20,
                     "name": "reload",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "dateKey",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "isConst": true,
+                    "lineNumber": 21,
+                    "name": "tasksForDate",
+                    "returnType": "QStringList"
                 }
             ],
             "object": true,
@@ -19,7 +33,7 @@
                     "designable": true,
                     "final": false,
                     "index": 0,
-                    "lineNumber": 10,
+                    "lineNumber": 11,
                     "name": "username",
                     "notify": "configChanged",
                     "read": "username",
@@ -34,7 +48,7 @@
                     "designable": true,
                     "final": false,
                     "index": 1,
-                    "lineNumber": 11,
+                    "lineNumber": 12,
                     "name": "profileImage",
                     "notify": "configChanged",
                     "read": "profileImage",
@@ -50,7 +64,7 @@
                 {
                     "access": "public",
                     "index": 0,
-                    "lineNumber": 22,
+                    "lineNumber": 24,
                     "name": "configChanged",
                     "returnType": "void"
                 }

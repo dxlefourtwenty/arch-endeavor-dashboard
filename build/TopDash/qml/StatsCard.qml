@@ -1,4 +1,5 @@
 import QtQuick
+import QtQuick.Layouts
 
 // StatsCard.qml
 // Each Text is bound individually so SystemInfo property-change signals
@@ -10,17 +11,15 @@ Rectangle {
     property color  cFg:       "white"
     property string cFont:     "sans"
     property int    cFontSize: 16
-    property int    titleInset: 30
     property real   usageFontSize: cFontSize * 1.012
+    // Can be negative to pull stats closer to the title.
+    property int    usageToStatsGap: 14
 
     color: "transparent"
 
     Column {
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.leftMargin: root.titleInset
-        spacing: 10
+        anchors.fill: parent
+        spacing: root.usageToStatsGap
 
         Text {
             width: parent.width
@@ -28,40 +27,48 @@ Rectangle {
             color: root.cFg
             font.family: root.cFont
             font.pixelSize: root.usageFontSize
+            lineHeightMode: Text.ProportionalHeight
+            lineHeight: 0.85
             horizontalAlignment: Text.AlignLeft
         }
 
-        Text {
+        GridLayout {
             width: parent.width
-            text: "CPU: " + SystemInfo.cpuUsage + "%"
-            color: root.cFg
-            font.family: root.cFont
-            font.pixelSize: root.usageFontSize
-            horizontalAlignment: Text.AlignLeft
-        }
-        Text {
-            width: parent.width
-            text: "GPU: " + SystemInfo.gpuUsage + "%"
-            color: root.cFg
-            font.family: root.cFont
-            font.pixelSize: root.usageFontSize
-            horizontalAlignment: Text.AlignLeft
-        }
-        Text {
-            width: parent.width
-            text: "RAM: " + SystemInfo.ramUsage + "%"
-            color: root.cFg
-            font.family: root.cFont
-            font.pixelSize: root.usageFontSize
-            horizontalAlignment: Text.AlignLeft
-        }
-        Text {
-            width: parent.width
-            text: "DISK: " + SystemInfo.diskUsage + "%"
-            color: root.cFg
-            font.family: root.cFont
-            font.pixelSize: root.usageFontSize
-            horizontalAlignment: Text.AlignLeft
+            columns: 2
+            columnSpacing: 24
+            rowSpacing: 4
+
+            Text {
+                text: "CPU: " + SystemInfo.cpuUsage + "%"
+                color: root.cFg
+                font.family: root.cFont
+                font.pixelSize: root.usageFontSize
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            Text {
+                text: "RAM: " + SystemInfo.ramUsage + "%"
+                color: root.cFg
+                font.family: root.cFont
+                font.pixelSize: root.usageFontSize
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            Text {
+                text: "GPU: " + SystemInfo.gpuUsage + "%"
+                color: root.cFg
+                font.family: root.cFont
+                font.pixelSize: root.usageFontSize
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            Text {
+                text: "DISK: " + SystemInfo.diskUsage + "%"
+                color: root.cFg
+                font.family: root.cFont
+                font.pixelSize: root.usageFontSize
+                horizontalAlignment: Text.AlignLeft
+            }
         }
     }
 }
