@@ -49,6 +49,14 @@ Window {
                                 : (theme && theme.radius !== undefined)       ? theme.radius      : 0
     property int    cBorderWidth: (style && style.borderWidth !== undefined)  ? style.borderWidth
                                 : (theme && theme.borderWidth !== undefined)  ? theme.borderWidth : 2
+    property bool   cBorderLeft:  (style && style.borderLeft !== undefined)   ? style.borderLeft
+                                : (theme && theme.borderLeft !== undefined)   ? theme.borderLeft : true
+    property bool   cBorderRight: (style && style.borderRight !== undefined)  ? style.borderRight
+                                : (theme && theme.borderRight !== undefined)  ? theme.borderRight : true
+    property bool   cBorderTop:   (style && style.borderTop !== undefined)    ? style.borderTop
+                                : (theme && theme.borderTop !== undefined)    ? theme.borderTop : true
+    property bool   cBorderBottom:(style && style.borderBottom !== undefined) ? style.borderBottom
+                                : (theme && theme.borderBottom !== undefined) ? theme.borderBottom : true
     property color  cBorder:      (theme && theme.border)                    ? theme.border      : "#444444"
     property color  cFg:          (theme && theme.fg)                        ? theme.fg          : "white"
     property color  cMuted:       (theme && theme.muted)                     ? theme.muted       : "#888888"
@@ -191,32 +199,115 @@ Window {
             color: Qt.rgba(win.cBg.r, win.cBg.g, win.cBg.b, win.cOpacity)
             border.width: 0
 
-            // sides + bottom borders
-            Rectangle { 
-                width: win.cBorderWidth; 
-                color: win.cBorder; 
-                anchors { 
-                    left: parent.left;  
-                    top: parent.top; 
-                    bottom: parent.bottom 
+            Canvas {
+                id: panelBorder
+                anchors.fill: parent
+                visible: borderWidth > 0 && (borderLeft || borderRight || borderTop || borderBottom)
+                antialiasing: true
+
+                property color borderColor: win.cBorder
+                property int borderWidth: win.cBorderWidth
+                property int radius: win.cRadius
+                property bool borderLeft: win.cBorderLeft
+                property bool borderRight: win.cBorderRight
+                property bool borderTop: win.cBorderTop
+                property bool borderBottom: win.cBorderBottom
+
+                onBorderColorChanged: requestPaint()
+                onBorderWidthChanged: requestPaint()
+                onRadiusChanged: requestPaint()
+                onBorderLeftChanged: requestPaint()
+                onBorderRightChanged: requestPaint()
+                onBorderTopChanged: requestPaint()
+                onBorderBottomChanged: requestPaint()
+                onWidthChanged: requestPaint()
+                onHeightChanged: requestPaint()
+
+                onPaint: {
+                    var ctx = getContext("2d")
+                    ctx.reset()
+                    ctx.clearRect(0, 0, width, height)
+
+                    if (!visible)
+                        return
+
+                    var bw = Math.max(0, borderWidth)
+                    var half = bw / 2
+                    var left = half
+                    var top = half
+                    var right = width - half
+                    var bottom = height - half
+
+                    var maxRadius = Math.max(0, Math.min(radius, (width - bw) / 2, (height - bw) / 2))
+                    var allSides = borderLeft && borderRight && borderTop && borderBottom
+
+                    ctx.strokeStyle = borderColor
+                    ctx.lineWidth = bw
+                    ctx.lineCap = "butt"
+                    ctx.lineJoin = "miter"
+
+                    if (allSides) {
+                        ctx.beginPath()
+                        ctx.moveTo(left + maxRadius, top)
+                        ctx.lineTo(right - maxRadius, top)
+                        if (maxRadius > 0) ctx.arc(right - maxRadius, top + maxRadius, maxRadius, -Math.PI / 2, 0)
+                        ctx.lineTo(right, bottom - maxRadius)
+                        if (maxRadius > 0) ctx.arc(right - maxRadius, bottom - maxRadius, maxRadius, 0, Math.PI / 2)
+                        ctx.lineTo(left + maxRadius, bottom)
+                        if (maxRadius > 0) ctx.arc(left + maxRadius, bottom - maxRadius, maxRadius, Math.PI / 2, Math.PI)
+                        ctx.lineTo(left, top + maxRadius)
+                        if (maxRadius > 0) ctx.arc(left + maxRadius, top + maxRadius, maxRadius, Math.PI, 3 * Math.PI / 2)
+                        ctx.closePath()
+                        ctx.stroke()
+                        return
+                    }
+
+                    if (borderTop) {
+                        ctx.beginPath()
+                        ctx.moveTo(left + (borderLeft ? maxRadius : 0), top)
+                        ctx.lineTo(right - (borderRight ? maxRadius : 0), top)
+                        ctx.stroke()
+                    }
+                    if (borderBottom) {
+                        ctx.beginPath()
+                        ctx.moveTo(left + (borderLeft ? maxRadius : 0), bottom)
+                        ctx.lineTo(right - (borderRight ? maxRadius : 0), bottom)
+                        ctx.stroke()
+                    }
+                    if (borderLeft) {
+                        ctx.beginPath()
+                        ctx.moveTo(left, top + (borderTop ? maxRadius : 0))
+                        ctx.lineTo(left, bottom - (borderBottom ? maxRadius : 0))
+                        ctx.stroke()
+                    }
+                    if (borderRight) {
+                        ctx.beginPath()
+                        ctx.moveTo(right, top + (borderTop ? maxRadius : 0))
+                        ctx.lineTo(right, bottom - (borderBottom ? maxRadius : 0))
+                        ctx.stroke()
+                    }
+
+                    if (maxRadius > 0 && borderTop && borderLeft) {
+                        ctx.beginPath()
+                        ctx.arc(left + maxRadius, top + maxRadius, maxRadius, Math.PI, 3 * Math.PI / 2)
+                        ctx.stroke()
+                    }
+                    if (maxRadius > 0 && borderTop && borderRight) {
+                        ctx.beginPath()
+                        ctx.arc(right - maxRadius, top + maxRadius, maxRadius, -Math.PI / 2, 0)
+                        ctx.stroke()
+                    }
+                    if (maxRadius > 0 && borderBottom && borderRight) {
+                        ctx.beginPath()
+                        ctx.arc(right - maxRadius, bottom - maxRadius, maxRadius, 0, Math.PI / 2)
+                        ctx.stroke()
+                    }
+                    if (maxRadius > 0 && borderBottom && borderLeft) {
+                        ctx.beginPath()
+                        ctx.arc(left + maxRadius, bottom - maxRadius, maxRadius, Math.PI / 2, Math.PI)
+                        ctx.stroke()
+                    }
                 }
-            }
-            Rectangle { 
-              width: win.cBorderWidth; 
-              color: win.cBorder; 
-              anchors { right: parent.right; 
-                  top: parent.top; 
-                  bottom: parent.bottom 
-              }
-            }
-            Rectangle { 
-                height: win.cBorderWidth; 
-                color: win.cBorder; 
-                anchors { 
-                    left: parent.left; 
-                    right: parent.right; 
-                    bottom: parent.bottom 
-                } 
             }
 
             GridLayout {
